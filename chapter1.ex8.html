@@ -1,0 +1,2419 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+><head
+  ><title
+    >chapter1.ex8</title
+    ><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+     /><meta http-equiv="Content-Style-Type" content="text/css"
+     /><link href="Agda.css" rel="stylesheet" type="text/css"
+     /></head
+  ><body
+  ><pre
+    ><a name="1" class="Symbol"
+      >{-#</a
+      ><a name="4"
+      > </a
+      ><a name="5" class="Keyword"
+      >OPTIONS</a
+      ><a name="12"
+      > --without-K </a
+      ><a name="25" class="Symbol"
+      >#-}</a
+      ><a name="28"
+      >
+
+</a
+      ><a name="30" class="Keyword"
+      >module</a
+      ><a name="36"
+      > </a
+      ><a name="37" href="chapter1.ex8.html#1" class="Module"
+      >chapter1.ex8</a
+      ><a name="49"
+      > </a
+      ><a name="50" class="Keyword"
+      >where</a
+      ><a name="55"
+      >
+
+</a
+      ><a name="57" class="Keyword"
+      >open</a
+      ><a name="61"
+      > </a
+      ><a name="62" class="Keyword"
+      >import</a
+      ><a name="68"
+      > </a
+      ><a name="69" href="equality.html#1" class="Module"
+      >equality</a
+      ><a name="77"
+      >
+</a
+      ><a name="78" class="Keyword"
+      >open</a
+      ><a name="82"
+      > </a
+      ><a name="83" class="Keyword"
+      >import</a
+      ><a name="89"
+      > </a
+      ><a name="90" href="sets.nat.core.html#1" class="Module"
+      >sets.nat.core</a
+      ><a name="103"
+      >
+  </a
+      ><a name="106" class="Keyword"
+      >hiding</a
+      ><a name="112"
+      > </a
+      ><a name="113" class="Symbol"
+      >(</a
+      ><a name="114"
+      >_*_</a
+      ><a name="117" class="Symbol"
+      >)</a
+      ><a name="118"
+      >
+
+</a
+      ><a name="120" href="chapter1.ex8.html#120" class="Function"
+      >rec</a
+      ><a name="123"
+      > </a
+      ><a name="124" class="Symbol"
+      >:</a
+      ><a name="125"
+      > </a
+      ><a name="126" class="Symbol"
+      >&#8704;</a
+      ><a name="127"
+      > </a
+      ><a name="128" class="Symbol"
+      >{</a
+      ><a name="129" href="chapter1.ex8.html#129" class="Bound"
+      >i</a
+      ><a name="130" class="Symbol"
+      >}{</a
+      ><a name="132" href="chapter1.ex8.html#132" class="Bound"
+      >C</a
+      ><a name="133"
+      > </a
+      ><a name="134" class="Symbol"
+      >:</a
+      ><a name="135"
+      > </a
+      ><a name="136" class="PrimitiveType"
+      >Set</a
+      ><a name="139"
+      > </a
+      ><a name="140" href="chapter1.ex8.html#129" class="Bound"
+      >i</a
+      ><a name="141" class="Symbol"
+      >}</a
+      ><a name="142"
+      >
+    </a
+      ><a name="147" class="Symbol"
+      >&#8594;</a
+      ><a name="148"
+      > </a
+      ><a name="149" href="chapter1.ex8.html#132" class="Bound"
+      >C</a
+      ><a name="150"
+      > </a
+      ><a name="151" class="Symbol"
+      >&#8594;</a
+      ><a name="152"
+      > </a
+      ><a name="153" class="Symbol"
+      >(</a
+      ><a name="154" href="sets.nat.core.html#182" class="Datatype"
+      >&#8469;</a
+      ><a name="155"
+      > </a
+      ><a name="156" class="Symbol"
+      >&#8594;</a
+      ><a name="157"
+      > </a
+      ><a name="158" href="chapter1.ex8.html#132" class="Bound"
+      >C</a
+      ><a name="159"
+      > </a
+      ><a name="160" class="Symbol"
+      >&#8594;</a
+      ><a name="161"
+      > </a
+      ><a name="162" href="chapter1.ex8.html#132" class="Bound"
+      >C</a
+      ><a name="163" class="Symbol"
+      >)</a
+      ><a name="164"
+      >
+    </a
+      ><a name="169" class="Symbol"
+      >&#8594;</a
+      ><a name="170"
+      > </a
+      ><a name="171" href="sets.nat.core.html#182" class="Datatype"
+      >&#8469;</a
+      ><a name="172"
+      > </a
+      ><a name="173" class="Symbol"
+      >&#8594;</a
+      ><a name="174"
+      > </a
+      ><a name="175" href="chapter1.ex8.html#132" class="Bound"
+      >C</a
+      ><a name="176"
+      >
+</a
+      ><a name="177" href="chapter1.ex8.html#120" class="Function"
+      >rec</a
+      ><a name="180"
+      > </a
+      ><a name="181" href="chapter1.ex8.html#181" class="Bound"
+      >z</a
+      ><a name="182"
+      > </a
+      ><a name="183" href="chapter1.ex8.html#183" class="Bound"
+      >f</a
+      ><a name="184"
+      > </a
+      ><a name="185" href="sets.nat.core.html#198" class="InductiveConstructor"
+      >0</a
+      ><a name="186"
+      > </a
+      ><a name="187" class="Symbol"
+      >=</a
+      ><a name="188"
+      > </a
+      ><a name="189" href="chapter1.ex8.html#181" class="Bound"
+      >z</a
+      ><a name="190"
+      >
+</a
+      ><a name="191" href="chapter1.ex8.html#120" class="Function"
+      >rec</a
+      ><a name="194"
+      > </a
+      ><a name="195" href="chapter1.ex8.html#195" class="Bound"
+      >z</a
+      ><a name="196"
+      > </a
+      ><a name="197" href="chapter1.ex8.html#197" class="Bound"
+      >f</a
+      ><a name="198"
+      > </a
+      ><a name="199" class="Symbol"
+      >(</a
+      ><a name="200" href="sets.nat.core.html#209" class="InductiveConstructor"
+      >suc</a
+      ><a name="203"
+      > </a
+      ><a name="204" href="chapter1.ex8.html#204" class="Bound"
+      >n</a
+      ><a name="205" class="Symbol"
+      >)</a
+      ><a name="206"
+      > </a
+      ><a name="207" class="Symbol"
+      >=</a
+      ><a name="208"
+      > </a
+      ><a name="209" href="chapter1.ex8.html#197" class="Bound"
+      >f</a
+      ><a name="210"
+      > </a
+      ><a name="211" href="chapter1.ex8.html#204" class="Bound"
+      >n</a
+      ><a name="212"
+      > </a
+      ><a name="213" class="Symbol"
+      >(</a
+      ><a name="214" href="chapter1.ex8.html#120" class="Function"
+      >rec</a
+      ><a name="217"
+      > </a
+      ><a name="218" href="chapter1.ex8.html#195" class="Bound"
+      >z</a
+      ><a name="219"
+      > </a
+      ><a name="220" href="chapter1.ex8.html#197" class="Bound"
+      >f</a
+      ><a name="221"
+      > </a
+      ><a name="222" href="chapter1.ex8.html#204" class="Bound"
+      >n</a
+      ><a name="223" class="Symbol"
+      >)</a
+      ><a name="224"
+      >
+
+</a
+      ><a name="226" href="chapter1.ex8.html#226" class="Function"
+      >ind</a
+      ><a name="229"
+      > </a
+      ><a name="230" class="Symbol"
+      >:</a
+      ><a name="231"
+      > </a
+      ><a name="232" class="Symbol"
+      >&#8704;</a
+      ><a name="233"
+      > </a
+      ><a name="234" class="Symbol"
+      >{</a
+      ><a name="235" href="chapter1.ex8.html#235" class="Bound"
+      >i</a
+      ><a name="236" class="Symbol"
+      >}(</a
+      ><a name="238" href="chapter1.ex8.html#238" class="Bound"
+      >P</a
+      ><a name="239"
+      > </a
+      ><a name="240" class="Symbol"
+      >:</a
+      ><a name="241"
+      > </a
+      ><a name="242" href="sets.nat.core.html#182" class="Datatype"
+      >&#8469;</a
+      ><a name="243"
+      > </a
+      ><a name="244" class="Symbol"
+      >&#8594;</a
+      ><a name="245"
+      > </a
+      ><a name="246" class="PrimitiveType"
+      >Set</a
+      ><a name="249"
+      > </a
+      ><a name="250" href="chapter1.ex8.html#235" class="Bound"
+      >i</a
+      ><a name="251" class="Symbol"
+      >)</a
+      ><a name="252"
+      >
+    </a
+      ><a name="257" class="Symbol"
+      >&#8594;</a
+      ><a name="258"
+      > </a
+      ><a name="259" href="chapter1.ex8.html#238" class="Bound"
+      >P</a
+      ><a name="260"
+      > </a
+      ><a name="261" class="Number"
+      >0</a
+      ><a name="262"
+      > </a
+      ><a name="263" class="Symbol"
+      >&#8594;</a
+      ><a name="264"
+      > </a
+      ><a name="265" class="Symbol"
+      >((</a
+      ><a name="267" href="chapter1.ex8.html#267" class="Bound"
+      >n</a
+      ><a name="268"
+      > </a
+      ><a name="269" class="Symbol"
+      >:</a
+      ><a name="270"
+      > </a
+      ><a name="271" href="sets.nat.core.html#182" class="Datatype"
+      >&#8469;</a
+      ><a name="272" class="Symbol"
+      >)</a
+      ><a name="273"
+      > </a
+      ><a name="274" class="Symbol"
+      >&#8594;</a
+      ><a name="275"
+      > </a
+      ><a name="276" href="chapter1.ex8.html#238" class="Bound"
+      >P</a
+      ><a name="277"
+      > </a
+      ><a name="278" href="chapter1.ex8.html#267" class="Bound"
+      >n</a
+      ><a name="279"
+      > </a
+      ><a name="280" class="Symbol"
+      >&#8594;</a
+      ><a name="281"
+      > </a
+      ><a name="282" href="chapter1.ex8.html#238" class="Bound"
+      >P</a
+      ><a name="283"
+      > </a
+      ><a name="284" class="Symbol"
+      >(</a
+      ><a name="285" href="sets.nat.core.html#209" class="InductiveConstructor"
+      >suc</a
+      ><a name="288"
+      > </a
+      ><a name="289" href="chapter1.ex8.html#267" class="Bound"
+      >n</a
+      ><a name="290" class="Symbol"
+      >))</a
+      ><a name="292"
+      >
+    </a
+      ><a name="297" class="Symbol"
+      >&#8594;</a
+      ><a name="298"
+      > </a
+      ><a name="299" class="Symbol"
+      >(</a
+      ><a name="300" href="chapter1.ex8.html#300" class="Bound"
+      >n</a
+      ><a name="301"
+      > </a
+      ><a name="302" class="Symbol"
+      >:</a
+      ><a name="303"
+      > </a
+      ><a name="304" href="sets.nat.core.html#182" class="Datatype"
+      >&#8469;</a
+      ><a name="305" class="Symbol"
+      >)</a
+      ><a name="306"
+      > </a
+      ><a name="307" class="Symbol"
+      >&#8594;</a
+      ><a name="308"
+      > </a
+      ><a name="309" href="chapter1.ex8.html#238" class="Bound"
+      >P</a
+      ><a name="310"
+      > </a
+      ><a name="311" href="chapter1.ex8.html#300" class="Bound"
+      >n</a
+      ><a name="312"
+      >
+</a
+      ><a name="313" href="chapter1.ex8.html#226" class="Function"
+      >ind</a
+      ><a name="316"
+      > </a
+      ><a name="317" href="chapter1.ex8.html#317" class="Bound"
+      >P</a
+      ><a name="318"
+      > </a
+      ><a name="319" href="chapter1.ex8.html#319" class="Bound"
+      >z</a
+      ><a name="320"
+      > </a
+      ><a name="321" href="chapter1.ex8.html#321" class="Bound"
+      >f</a
+      ><a name="322"
+      > </a
+      ><a name="323" href="sets.nat.core.html#198" class="InductiveConstructor"
+      >0</a
+      ><a name="324"
+      > </a
+      ><a name="325" class="Symbol"
+      >=</a
+      ><a name="326"
+      > </a
+      ><a name="327" href="chapter1.ex8.html#319" class="Bound"
+      >z</a
+      ><a name="328"
+      >
+</a
+      ><a name="329" href="chapter1.ex8.html#226" class="Function"
+      >ind</a
+      ><a name="332"
+      > </a
+      ><a name="333" href="chapter1.ex8.html#333" class="Bound"
+      >P</a
+      ><a name="334"
+      > </a
+      ><a name="335" href="chapter1.ex8.html#335" class="Bound"
+      >z</a
+      ><a name="336"
+      > </a
+      ><a name="337" href="chapter1.ex8.html#337" class="Bound"
+      >f</a
+      ><a name="338"
+      > </a
+      ><a name="339" class="Symbol"
+      >(</a
+      ><a name="340" href="sets.nat.core.html#209" class="InductiveConstructor"
+      >suc</a
+      ><a name="343"
+      > </a
+      ><a name="344" href="chapter1.ex8.html#344" class="Bound"
+      >n</a
+      ><a name="345" class="Symbol"
+      >)</a
+      ><a name="346"
+      > </a
+      ><a name="347" class="Symbol"
+      >=</a
+      ><a name="348"
+      > </a
+      ><a name="349" href="chapter1.ex8.html#337" class="Bound"
+      >f</a
+      ><a name="350"
+      > </a
+      ><a name="351" href="chapter1.ex8.html#344" class="Bound"
+      >n</a
+      ><a name="352"
+      > </a
+      ><a name="353" class="Symbol"
+      >(</a
+      ><a name="354" href="chapter1.ex8.html#226" class="Function"
+      >ind</a
+      ><a name="357"
+      > </a
+      ><a name="358" href="chapter1.ex8.html#333" class="Bound"
+      >P</a
+      ><a name="359"
+      > </a
+      ><a name="360" href="chapter1.ex8.html#335" class="Bound"
+      >z</a
+      ><a name="361"
+      > </a
+      ><a name="362" href="chapter1.ex8.html#337" class="Bound"
+      >f</a
+      ><a name="363"
+      > </a
+      ><a name="364" href="chapter1.ex8.html#344" class="Bound"
+      >n</a
+      ><a name="365" class="Symbol"
+      >)</a
+      ><a name="366"
+      >
+
+</a
+      ><a name="368" href="chapter1.ex8.html#368" class="Function Operator"
+      >_*_</a
+      ><a name="371"
+      > </a
+      ><a name="372" class="Symbol"
+      >:</a
+      ><a name="373"
+      > </a
+      ><a name="374" href="sets.nat.core.html#182" class="Datatype"
+      >&#8469;</a
+      ><a name="375"
+      > </a
+      ><a name="376" class="Symbol"
+      >&#8594;</a
+      ><a name="377"
+      > </a
+      ><a name="378" href="sets.nat.core.html#182" class="Datatype"
+      >&#8469;</a
+      ><a name="379"
+      > </a
+      ><a name="380" class="Symbol"
+      >&#8594;</a
+      ><a name="381"
+      > </a
+      ><a name="382" href="sets.nat.core.html#182" class="Datatype"
+      >&#8469;</a
+      ><a name="383"
+      >
+</a
+      ><a name="384" href="chapter1.ex8.html#368" class="Function Operator"
+      >_*_</a
+      ><a name="387"
+      > </a
+      ><a name="388" href="chapter1.ex8.html#388" class="Bound"
+      >m</a
+      ><a name="389"
+      > </a
+      ><a name="390" class="Symbol"
+      >=</a
+      ><a name="391"
+      > </a
+      ><a name="392" href="chapter1.ex8.html#120" class="Function"
+      >rec</a
+      ><a name="395"
+      > </a
+      ><a name="396" class="Number"
+      >0</a
+      ><a name="397"
+      > </a
+      ><a name="398" class="Symbol"
+      >(&#955;</a
+      ><a name="400"
+      > </a
+      ><a name="401" href="chapter1.ex8.html#401" class="Bound"
+      >_</a
+      ><a name="402"
+      > </a
+      ><a name="403" href="chapter1.ex8.html#403" class="Bound"
+      >mn</a
+      ><a name="405"
+      > </a
+      ><a name="406" class="Symbol"
+      >&#8594;</a
+      ><a name="407"
+      > </a
+      ><a name="408" href="chapter1.ex8.html#388" class="Bound"
+      >m</a
+      ><a name="409"
+      > </a
+      ><a name="410" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="411"
+      > </a
+      ><a name="412" href="chapter1.ex8.html#403" class="Bound"
+      >mn</a
+      ><a name="414" class="Symbol"
+      >)</a
+      ><a name="415"
+      >
+</a
+      ><a name="416" class="Keyword"
+      >infixl</a
+      ><a name="422"
+      > </a
+      ><a name="423" class="Number"
+      >7</a
+      ><a name="424"
+      > _*_
+
+</a
+      ><a name="430" href="chapter1.ex8.html#430" class="Function Operator"
+      >_^_</a
+      ><a name="433"
+      > </a
+      ><a name="434" class="Symbol"
+      >:</a
+      ><a name="435"
+      > </a
+      ><a name="436" href="sets.nat.core.html#182" class="Datatype"
+      >&#8469;</a
+      ><a name="437"
+      > </a
+      ><a name="438" class="Symbol"
+      >&#8594;</a
+      ><a name="439"
+      > </a
+      ><a name="440" href="sets.nat.core.html#182" class="Datatype"
+      >&#8469;</a
+      ><a name="441"
+      > </a
+      ><a name="442" class="Symbol"
+      >&#8594;</a
+      ><a name="443"
+      > </a
+      ><a name="444" href="sets.nat.core.html#182" class="Datatype"
+      >&#8469;</a
+      ><a name="445"
+      >
+</a
+      ><a name="446" href="chapter1.ex8.html#430" class="Function Operator"
+      >_^_</a
+      ><a name="449"
+      > </a
+      ><a name="450" href="chapter1.ex8.html#450" class="Bound"
+      >n</a
+      ><a name="451"
+      > </a
+      ><a name="452" class="Symbol"
+      >=</a
+      ><a name="453"
+      > </a
+      ><a name="454" href="chapter1.ex8.html#120" class="Function"
+      >rec</a
+      ><a name="457"
+      > </a
+      ><a name="458" class="Number"
+      >1</a
+      ><a name="459"
+      > </a
+      ><a name="460" class="Symbol"
+      >(&#955;</a
+      ><a name="462"
+      > </a
+      ><a name="463" href="chapter1.ex8.html#463" class="Bound"
+      >_</a
+      ><a name="464"
+      > </a
+      ><a name="465" href="chapter1.ex8.html#465" class="Bound"
+      >e</a
+      ><a name="466"
+      > </a
+      ><a name="467" class="Symbol"
+      >&#8594;</a
+      ><a name="468"
+      > </a
+      ><a name="469" href="chapter1.ex8.html#450" class="Bound"
+      >n</a
+      ><a name="470"
+      > </a
+      ><a name="471" href="chapter1.ex8.html#368" class="Function Operator"
+      >*</a
+      ><a name="472"
+      > </a
+      ><a name="473" href="chapter1.ex8.html#465" class="Bound"
+      >e</a
+      ><a name="474" class="Symbol"
+      >)</a
+      ><a name="475"
+      >
+
+</a
+      ><a name="477" href="chapter1.ex8.html#477" class="Function"
+      >+-left-unit</a
+      ><a name="488"
+      > </a
+      ><a name="489" class="Symbol"
+      >:</a
+      ><a name="490"
+      > </a
+      ><a name="491" class="Symbol"
+      >&#8704;</a
+      ><a name="492"
+      > </a
+      ><a name="493" href="chapter1.ex8.html#493" class="Bound"
+      >n</a
+      ><a name="494"
+      > </a
+      ><a name="495" class="Symbol"
+      >&#8594;</a
+      ><a name="496"
+      > </a
+      ><a name="497" class="Number"
+      >0</a
+      ><a name="498"
+      > </a
+      ><a name="499" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="500"
+      > </a
+      ><a name="501" href="chapter1.ex8.html#493" class="Bound"
+      >n</a
+      ><a name="502"
+      > </a
+      ><a name="503" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="504"
+      > </a
+      ><a name="505" href="chapter1.ex8.html#493" class="Bound"
+      >n</a
+      ><a name="506"
+      >
+</a
+      ><a name="507" href="chapter1.ex8.html#477" class="Function"
+      >+-left-unit</a
+      ><a name="518"
+      > </a
+      ><a name="519" href="chapter1.ex8.html#519" class="Bound"
+      >n</a
+      ><a name="520"
+      > </a
+      ><a name="521" class="Symbol"
+      >=</a
+      ><a name="522"
+      > </a
+      ><a name="523" href="equality.core.html#193" class="InductiveConstructor"
+      >refl</a
+      ><a name="527"
+      >
+
+</a
+      ><a name="529" href="chapter1.ex8.html#529" class="Function"
+      >+-right-unit</a
+      ><a name="541"
+      > </a
+      ><a name="542" class="Symbol"
+      >:</a
+      ><a name="543"
+      > </a
+      ><a name="544" class="Symbol"
+      >&#8704;</a
+      ><a name="545"
+      > </a
+      ><a name="546" href="chapter1.ex8.html#546" class="Bound"
+      >n</a
+      ><a name="547"
+      > </a
+      ><a name="548" class="Symbol"
+      >&#8594;</a
+      ><a name="549"
+      > </a
+      ><a name="550" href="chapter1.ex8.html#546" class="Bound"
+      >n</a
+      ><a name="551"
+      > </a
+      ><a name="552" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="553"
+      > </a
+      ><a name="554" class="Number"
+      >0</a
+      ><a name="555"
+      > </a
+      ><a name="556" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="557"
+      > </a
+      ><a name="558" href="chapter1.ex8.html#546" class="Bound"
+      >n</a
+      ><a name="559"
+      >
+</a
+      ><a name="560" href="chapter1.ex8.html#529" class="Function"
+      >+-right-unit</a
+      ><a name="572"
+      > </a
+      ><a name="573" class="Symbol"
+      >=</a
+      ><a name="574"
+      > </a
+      ><a name="575" href="chapter1.ex8.html#226" class="Function"
+      >ind</a
+      ><a name="578"
+      > </a
+      ><a name="579" class="Symbol"
+      >(&#955;</a
+      ><a name="581"
+      > </a
+      ><a name="582" href="chapter1.ex8.html#582" class="Bound"
+      >n</a
+      ><a name="583"
+      > </a
+      ><a name="584" class="Symbol"
+      >&#8594;</a
+      ><a name="585"
+      > </a
+      ><a name="586" href="chapter1.ex8.html#582" class="Bound"
+      >n</a
+      ><a name="587"
+      > </a
+      ><a name="588" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="589"
+      > </a
+      ><a name="590" class="Number"
+      >0</a
+      ><a name="591"
+      > </a
+      ><a name="592" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="593"
+      > </a
+      ><a name="594" href="chapter1.ex8.html#582" class="Bound"
+      >n</a
+      ><a name="595" class="Symbol"
+      >)</a
+      ><a name="596"
+      > </a
+      ><a name="597" href="equality.core.html#193" class="InductiveConstructor"
+      >refl</a
+      ><a name="601"
+      > </a
+      ><a name="602" class="Symbol"
+      >(&#955;</a
+      ><a name="604"
+      > </a
+      ><a name="605" href="chapter1.ex8.html#605" class="Bound"
+      >_</a
+      ><a name="606"
+      > </a
+      ><a name="607" class="Symbol"
+      >&#8594;</a
+      ><a name="608"
+      > </a
+      ><a name="609" href="equality.core.html#364" class="Function"
+      >ap</a
+      ><a name="611"
+      > </a
+      ><a name="612" href="sets.nat.core.html#209" class="InductiveConstructor"
+      >suc</a
+      ><a name="615" class="Symbol"
+      >)</a
+      ><a name="616"
+      >
+
+</a
+      ><a name="618" href="chapter1.ex8.html#618" class="Function"
+      >+-associativity</a
+      ><a name="633"
+      > </a
+      ><a name="634" class="Symbol"
+      >:</a
+      ><a name="635"
+      > </a
+      ><a name="636" class="Symbol"
+      >&#8704;</a
+      ><a name="637"
+      > </a
+      ><a name="638" href="chapter1.ex8.html#638" class="Bound"
+      >n</a
+      ><a name="639"
+      > </a
+      ><a name="640" href="chapter1.ex8.html#640" class="Bound"
+      >m</a
+      ><a name="641"
+      > </a
+      ><a name="642" href="chapter1.ex8.html#642" class="Bound"
+      >p</a
+      ><a name="643"
+      > </a
+      ><a name="644" class="Symbol"
+      >&#8594;</a
+      ><a name="645"
+      > </a
+      ><a name="646" href="chapter1.ex8.html#638" class="Bound"
+      >n</a
+      ><a name="647"
+      > </a
+      ><a name="648" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="649"
+      > </a
+      ><a name="650" href="chapter1.ex8.html#640" class="Bound"
+      >m</a
+      ><a name="651"
+      > </a
+      ><a name="652" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="653"
+      > </a
+      ><a name="654" href="chapter1.ex8.html#642" class="Bound"
+      >p</a
+      ><a name="655"
+      > </a
+      ><a name="656" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="657"
+      > </a
+      ><a name="658" href="chapter1.ex8.html#638" class="Bound"
+      >n</a
+      ><a name="659"
+      > </a
+      ><a name="660" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="661"
+      > </a
+      ><a name="662" class="Symbol"
+      >(</a
+      ><a name="663" href="chapter1.ex8.html#640" class="Bound"
+      >m</a
+      ><a name="664"
+      > </a
+      ><a name="665" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="666"
+      > </a
+      ><a name="667" href="chapter1.ex8.html#642" class="Bound"
+      >p</a
+      ><a name="668" class="Symbol"
+      >)</a
+      ><a name="669"
+      >
+</a
+      ><a name="670" href="chapter1.ex8.html#618" class="Function"
+      >+-associativity</a
+      ><a name="685"
+      > </a
+      ><a name="686" class="Symbol"
+      >=</a
+      ><a name="687"
+      > </a
+      ><a name="688" href="chapter1.ex8.html#226" class="Function"
+      >ind</a
+      ><a name="691"
+      > </a
+      ><a name="692" class="Symbol"
+      >(&#955;</a
+      ><a name="694"
+      > </a
+      ><a name="695" href="chapter1.ex8.html#695" class="Bound"
+      >n</a
+      ><a name="696"
+      > </a
+      ><a name="697" class="Symbol"
+      >&#8594;</a
+      ><a name="698"
+      > </a
+      ><a name="699" class="Symbol"
+      >&#8704;</a
+      ><a name="700"
+      > </a
+      ><a name="701" href="chapter1.ex8.html#701" class="Bound"
+      >m</a
+      ><a name="702"
+      > </a
+      ><a name="703" href="chapter1.ex8.html#703" class="Bound"
+      >p</a
+      ><a name="704"
+      > </a
+      ><a name="705" class="Symbol"
+      >&#8594;</a
+      ><a name="706"
+      > </a
+      ><a name="707" href="chapter1.ex8.html#695" class="Bound"
+      >n</a
+      ><a name="708"
+      > </a
+      ><a name="709" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="710"
+      > </a
+      ><a name="711" href="chapter1.ex8.html#701" class="Bound"
+      >m</a
+      ><a name="712"
+      > </a
+      ><a name="713" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="714"
+      > </a
+      ><a name="715" href="chapter1.ex8.html#703" class="Bound"
+      >p</a
+      ><a name="716"
+      > </a
+      ><a name="717" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="718"
+      > </a
+      ><a name="719" href="chapter1.ex8.html#695" class="Bound"
+      >n</a
+      ><a name="720"
+      > </a
+      ><a name="721" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="722"
+      > </a
+      ><a name="723" class="Symbol"
+      >(</a
+      ><a name="724" href="chapter1.ex8.html#701" class="Bound"
+      >m</a
+      ><a name="725"
+      > </a
+      ><a name="726" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="727"
+      > </a
+      ><a name="728" href="chapter1.ex8.html#703" class="Bound"
+      >p</a
+      ><a name="729" class="Symbol"
+      >))</a
+      ><a name="731"
+      >
+                      </a
+      ><a name="754" class="Symbol"
+      >(&#955;</a
+      ><a name="756"
+      > </a
+      ><a name="757" href="chapter1.ex8.html#757" class="Bound"
+      >_</a
+      ><a name="758"
+      > </a
+      ><a name="759" href="chapter1.ex8.html#759" class="Bound"
+      >_</a
+      ><a name="760"
+      > </a
+      ><a name="761" class="Symbol"
+      >&#8594;</a
+      ><a name="762"
+      > </a
+      ><a name="763" href="equality.core.html#193" class="InductiveConstructor"
+      >refl</a
+      ><a name="767" class="Symbol"
+      >)</a
+      ><a name="768"
+      >
+                      </a
+      ><a name="791" class="Symbol"
+      >(&#955;</a
+      ><a name="793"
+      > </a
+      ><a name="794" href="chapter1.ex8.html#794" class="Bound"
+      >n</a
+      ><a name="795"
+      > </a
+      ><a name="796" href="chapter1.ex8.html#796" class="Bound"
+      >r</a
+      ><a name="797"
+      > </a
+      ><a name="798" href="chapter1.ex8.html#798" class="Bound"
+      >m</a
+      ><a name="799"
+      > </a
+      ><a name="800" href="chapter1.ex8.html#800" class="Bound"
+      >p</a
+      ><a name="801"
+      > </a
+      ><a name="802" class="Symbol"
+      >&#8594;</a
+      ><a name="803"
+      > </a
+      ><a name="804" href="equality.core.html#364" class="Function"
+      >ap</a
+      ><a name="806"
+      > </a
+      ><a name="807" href="sets.nat.core.html#209" class="InductiveConstructor"
+      >suc</a
+      ><a name="810"
+      > </a
+      ><a name="811" class="Symbol"
+      >(</a
+      ><a name="812" href="chapter1.ex8.html#796" class="Bound"
+      >r</a
+      ><a name="813"
+      > </a
+      ><a name="814" href="chapter1.ex8.html#798" class="Bound"
+      >m</a
+      ><a name="815"
+      > </a
+      ><a name="816" href="chapter1.ex8.html#800" class="Bound"
+      >p</a
+      ><a name="817" class="Symbol"
+      >))</a
+      ><a name="819"
+      >
+
+</a
+      ><a name="821" href="chapter1.ex8.html#821" class="Function"
+      >+-suc</a
+      ><a name="826"
+      > </a
+      ><a name="827" class="Symbol"
+      >:</a
+      ><a name="828"
+      > </a
+      ><a name="829" class="Symbol"
+      >&#8704;</a
+      ><a name="830"
+      > </a
+      ><a name="831" href="chapter1.ex8.html#831" class="Bound"
+      >n</a
+      ><a name="832"
+      > </a
+      ><a name="833" href="chapter1.ex8.html#833" class="Bound"
+      >m</a
+      ><a name="834"
+      > </a
+      ><a name="835" class="Symbol"
+      >&#8594;</a
+      ><a name="836"
+      > </a
+      ><a name="837" href="sets.nat.core.html#209" class="InductiveConstructor"
+      >suc</a
+      ><a name="840"
+      > </a
+      ><a name="841" href="chapter1.ex8.html#831" class="Bound"
+      >n</a
+      ><a name="842"
+      > </a
+      ><a name="843" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="844"
+      > </a
+      ><a name="845" href="chapter1.ex8.html#833" class="Bound"
+      >m</a
+      ><a name="846"
+      > </a
+      ><a name="847" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="848"
+      > </a
+      ><a name="849" href="chapter1.ex8.html#831" class="Bound"
+      >n</a
+      ><a name="850"
+      > </a
+      ><a name="851" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="852"
+      > </a
+      ><a name="853" href="sets.nat.core.html#209" class="InductiveConstructor"
+      >suc</a
+      ><a name="856"
+      > </a
+      ><a name="857" href="chapter1.ex8.html#833" class="Bound"
+      >m</a
+      ><a name="858"
+      >
+</a
+      ><a name="859" href="chapter1.ex8.html#821" class="Function"
+      >+-suc</a
+      ><a name="864"
+      > </a
+      ><a name="865" class="Symbol"
+      >=</a
+      ><a name="866"
+      > </a
+      ><a name="867" href="chapter1.ex8.html#226" class="Function"
+      >ind</a
+      ><a name="870"
+      > </a
+      ><a name="871" class="Symbol"
+      >(&#955;</a
+      ><a name="873"
+      > </a
+      ><a name="874" href="chapter1.ex8.html#874" class="Bound"
+      >n</a
+      ><a name="875"
+      > </a
+      ><a name="876" class="Symbol"
+      >&#8594;</a
+      ><a name="877"
+      > </a
+      ><a name="878" class="Symbol"
+      >&#8704;</a
+      ><a name="879"
+      > </a
+      ><a name="880" href="chapter1.ex8.html#880" class="Bound"
+      >m</a
+      ><a name="881"
+      > </a
+      ><a name="882" class="Symbol"
+      >&#8594;</a
+      ><a name="883"
+      > </a
+      ><a name="884" href="sets.nat.core.html#209" class="InductiveConstructor"
+      >suc</a
+      ><a name="887"
+      > </a
+      ><a name="888" href="chapter1.ex8.html#874" class="Bound"
+      >n</a
+      ><a name="889"
+      > </a
+      ><a name="890" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="891"
+      > </a
+      ><a name="892" href="chapter1.ex8.html#880" class="Bound"
+      >m</a
+      ><a name="893"
+      > </a
+      ><a name="894" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="895"
+      > </a
+      ><a name="896" href="chapter1.ex8.html#874" class="Bound"
+      >n</a
+      ><a name="897"
+      > </a
+      ><a name="898" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="899"
+      > </a
+      ><a name="900" href="sets.nat.core.html#209" class="InductiveConstructor"
+      >suc</a
+      ><a name="903"
+      > </a
+      ><a name="904" href="chapter1.ex8.html#880" class="Bound"
+      >m</a
+      ><a name="905" class="Symbol"
+      >)</a
+      ><a name="906"
+      >
+            </a
+      ><a name="919" class="Symbol"
+      >(&#955;</a
+      ><a name="921"
+      > </a
+      ><a name="922" href="chapter1.ex8.html#922" class="Bound"
+      >m</a
+      ><a name="923"
+      > </a
+      ><a name="924" class="Symbol"
+      >&#8594;</a
+      ><a name="925"
+      > </a
+      ><a name="926" href="equality.core.html#193" class="InductiveConstructor"
+      >refl</a
+      ><a name="930" class="Symbol"
+      >)</a
+      ><a name="931"
+      >
+            </a
+      ><a name="944" class="Symbol"
+      >(&#955;</a
+      ><a name="946"
+      > </a
+      ><a name="947" href="chapter1.ex8.html#947" class="Bound"
+      >n</a
+      ><a name="948"
+      > </a
+      ><a name="949" href="chapter1.ex8.html#949" class="Bound"
+      >ih</a
+      ><a name="951"
+      > </a
+      ><a name="952" href="chapter1.ex8.html#952" class="Bound"
+      >m</a
+      ><a name="953"
+      > </a
+      ><a name="954" class="Symbol"
+      >&#8594;</a
+      ><a name="955"
+      > </a
+      ><a name="956" href="equality.core.html#364" class="Function"
+      >ap</a
+      ><a name="958"
+      > </a
+      ><a name="959" href="sets.nat.core.html#209" class="InductiveConstructor"
+      >suc</a
+      ><a name="962"
+      > </a
+      ><a name="963" class="Symbol"
+      >(</a
+      ><a name="964" href="chapter1.ex8.html#949" class="Bound"
+      >ih</a
+      ><a name="966"
+      > </a
+      ><a name="967" href="chapter1.ex8.html#952" class="Bound"
+      >m</a
+      ><a name="968" class="Symbol"
+      >))</a
+      ><a name="970"
+      >
+
+</a
+      ><a name="972" href="chapter1.ex8.html#972" class="Function"
+      >+-commutativity</a
+      ><a name="987"
+      > </a
+      ><a name="988" class="Symbol"
+      >:</a
+      ><a name="989"
+      > </a
+      ><a name="990" class="Symbol"
+      >&#8704;</a
+      ><a name="991"
+      > </a
+      ><a name="992" href="chapter1.ex8.html#992" class="Bound"
+      >n</a
+      ><a name="993"
+      > </a
+      ><a name="994" href="chapter1.ex8.html#994" class="Bound"
+      >m</a
+      ><a name="995"
+      > </a
+      ><a name="996" class="Symbol"
+      >&#8594;</a
+      ><a name="997"
+      > </a
+      ><a name="998" href="chapter1.ex8.html#992" class="Bound"
+      >n</a
+      ><a name="999"
+      > </a
+      ><a name="1000" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="1001"
+      > </a
+      ><a name="1002" href="chapter1.ex8.html#994" class="Bound"
+      >m</a
+      ><a name="1003"
+      > </a
+      ><a name="1004" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="1005"
+      > </a
+      ><a name="1006" href="chapter1.ex8.html#994" class="Bound"
+      >m</a
+      ><a name="1007"
+      > </a
+      ><a name="1008" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="1009"
+      > </a
+      ><a name="1010" href="chapter1.ex8.html#992" class="Bound"
+      >n</a
+      ><a name="1011"
+      >
+</a
+      ><a name="1012" href="chapter1.ex8.html#972" class="Function"
+      >+-commutativity</a
+      ><a name="1027"
+      > </a
+      ><a name="1028" class="Symbol"
+      >=</a
+      ><a name="1029"
+      > </a
+      ><a name="1030" href="chapter1.ex8.html#226" class="Function"
+      >ind</a
+      ><a name="1033"
+      > </a
+      ><a name="1034" class="Symbol"
+      >(&#955;</a
+      ><a name="1036"
+      > </a
+      ><a name="1037" href="chapter1.ex8.html#1037" class="Bound"
+      >n</a
+      ><a name="1038"
+      > </a
+      ><a name="1039" class="Symbol"
+      >&#8594;</a
+      ><a name="1040"
+      > </a
+      ><a name="1041" class="Symbol"
+      >&#8704;</a
+      ><a name="1042"
+      > </a
+      ><a name="1043" href="chapter1.ex8.html#1043" class="Bound"
+      >m</a
+      ><a name="1044"
+      > </a
+      ><a name="1045" class="Symbol"
+      >&#8594;</a
+      ><a name="1046"
+      > </a
+      ><a name="1047" href="chapter1.ex8.html#1037" class="Bound"
+      >n</a
+      ><a name="1048"
+      > </a
+      ><a name="1049" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="1050"
+      > </a
+      ><a name="1051" href="chapter1.ex8.html#1043" class="Bound"
+      >m</a
+      ><a name="1052"
+      > </a
+      ><a name="1053" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="1054"
+      > </a
+      ><a name="1055" href="chapter1.ex8.html#1043" class="Bound"
+      >m</a
+      ><a name="1056"
+      > </a
+      ><a name="1057" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="1058"
+      > </a
+      ><a name="1059" href="chapter1.ex8.html#1037" class="Bound"
+      >n</a
+      ><a name="1060" class="Symbol"
+      >)</a
+      ><a name="1061"
+      >
+                      </a
+      ><a name="1084" class="Symbol"
+      >(&#955;</a
+      ><a name="1086"
+      > </a
+      ><a name="1087" href="chapter1.ex8.html#1087" class="Bound"
+      >m</a
+      ><a name="1088"
+      > </a
+      ><a name="1089" class="Symbol"
+      >&#8594;</a
+      ><a name="1090"
+      > </a
+      ><a name="1091" href="equality.core.html#207" class="Function"
+      >sym</a
+      ><a name="1094"
+      > </a
+      ><a name="1095" class="Symbol"
+      >(</a
+      ><a name="1096" href="chapter1.ex8.html#529" class="Function"
+      >+-right-unit</a
+      ><a name="1108"
+      > </a
+      ><a name="1109" href="chapter1.ex8.html#1087" class="Bound"
+      >m</a
+      ><a name="1110" class="Symbol"
+      >))</a
+      ><a name="1112"
+      >
+                      </a
+      ><a name="1135" class="Symbol"
+      >(&#955;</a
+      ><a name="1137"
+      > </a
+      ><a name="1138" href="chapter1.ex8.html#1138" class="Bound"
+      >n</a
+      ><a name="1139"
+      > </a
+      ><a name="1140" href="chapter1.ex8.html#1140" class="Bound"
+      >ih</a
+      ><a name="1142"
+      > </a
+      ><a name="1143" href="chapter1.ex8.html#1143" class="Bound"
+      >m</a
+      ><a name="1144"
+      > </a
+      ><a name="1145" class="Symbol"
+      >&#8594;</a
+      ><a name="1146"
+      > </a
+      ><a name="1147" href="chapter1.ex8.html#1198" class="Function"
+      >step</a
+      ><a name="1151"
+      > </a
+      ><a name="1152" href="chapter1.ex8.html#1138" class="Bound"
+      >n</a
+      ><a name="1153"
+      > </a
+      ><a name="1154" href="chapter1.ex8.html#1143" class="Bound"
+      >m</a
+      ><a name="1155"
+      > </a
+      ><a name="1156" class="Symbol"
+      >(</a
+      ><a name="1157" href="chapter1.ex8.html#1140" class="Bound"
+      >ih</a
+      ><a name="1159"
+      > </a
+      ><a name="1160" href="chapter1.ex8.html#1143" class="Bound"
+      >m</a
+      ><a name="1161" class="Symbol"
+      >))</a
+      ><a name="1163"
+      >
+  </a
+      ><a name="1166" class="Keyword"
+      >where</a
+      ><a name="1171"
+      >
+    </a
+      ><a name="1176" class="Keyword"
+      >open</a
+      ><a name="1180"
+      > </a
+      ><a name="1181" href="equality.reasoning.html#96" class="Module"
+      >&#8801;-Reasoning</a
+      ><a name="1192"
+      >
+
+    </a
+      ><a name="1198" href="chapter1.ex8.html#1198" class="Function"
+      >step</a
+      ><a name="1202"
+      > </a
+      ><a name="1203" class="Symbol"
+      >:</a
+      ><a name="1204"
+      > </a
+      ><a name="1205" class="Symbol"
+      >&#8704;</a
+      ><a name="1206"
+      > </a
+      ><a name="1207" href="chapter1.ex8.html#1207" class="Bound"
+      >n</a
+      ><a name="1208"
+      > </a
+      ><a name="1209" href="chapter1.ex8.html#1209" class="Bound"
+      >m</a
+      ><a name="1210"
+      >
+         </a
+      ><a name="1220" class="Symbol"
+      >&#8594;</a
+      ><a name="1221"
+      > </a
+      ><a name="1222" href="chapter1.ex8.html#1207" class="Bound"
+      >n</a
+      ><a name="1223"
+      > </a
+      ><a name="1224" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="1225"
+      > </a
+      ><a name="1226" href="chapter1.ex8.html#1209" class="Bound"
+      >m</a
+      ><a name="1227"
+      > </a
+      ><a name="1228" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="1229"
+      > </a
+      ><a name="1230" href="chapter1.ex8.html#1209" class="Bound"
+      >m</a
+      ><a name="1231"
+      > </a
+      ><a name="1232" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="1233"
+      > </a
+      ><a name="1234" href="chapter1.ex8.html#1207" class="Bound"
+      >n</a
+      ><a name="1235"
+      >
+         </a
+      ><a name="1245" class="Symbol"
+      >&#8594;</a
+      ><a name="1246"
+      > </a
+      ><a name="1247" href="sets.nat.core.html#209" class="InductiveConstructor"
+      >suc</a
+      ><a name="1250"
+      > </a
+      ><a name="1251" href="chapter1.ex8.html#1207" class="Bound"
+      >n</a
+      ><a name="1252"
+      > </a
+      ><a name="1253" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="1254"
+      > </a
+      ><a name="1255" href="chapter1.ex8.html#1209" class="Bound"
+      >m</a
+      ><a name="1256"
+      > </a
+      ><a name="1257" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="1258"
+      > </a
+      ><a name="1259" href="chapter1.ex8.html#1209" class="Bound"
+      >m</a
+      ><a name="1260"
+      > </a
+      ><a name="1261" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="1262"
+      > </a
+      ><a name="1263" href="sets.nat.core.html#209" class="InductiveConstructor"
+      >suc</a
+      ><a name="1266"
+      > </a
+      ><a name="1267" href="chapter1.ex8.html#1207" class="Bound"
+      >n</a
+      ><a name="1268"
+      >
+    </a
+      ><a name="1273" href="chapter1.ex8.html#1198" class="Function"
+      >step</a
+      ><a name="1277"
+      > </a
+      ><a name="1278" href="chapter1.ex8.html#1278" class="Bound"
+      >n</a
+      ><a name="1279"
+      > </a
+      ><a name="1280" href="chapter1.ex8.html#1280" class="Bound"
+      >m</a
+      ><a name="1281"
+      > </a
+      ><a name="1282" href="chapter1.ex8.html#1282" class="Bound"
+      >ih</a
+      ><a name="1284"
+      > </a
+      ><a name="1285" class="Symbol"
+      >=</a
+      ><a name="1286"
+      > </a
+      ><a name="1287" href="equality.reasoning.html#423" class="Function Operator"
+      >begin</a
+      ><a name="1292"
+      >
+        </a
+      ><a name="1301" href="sets.nat.core.html#209" class="InductiveConstructor"
+      >suc</a
+      ><a name="1304"
+      > </a
+      ><a name="1305" class="Symbol"
+      >(</a
+      ><a name="1306" href="chapter1.ex8.html#1278" class="Bound"
+      >n</a
+      ><a name="1307"
+      > </a
+      ><a name="1308" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="1309"
+      > </a
+      ><a name="1310" href="chapter1.ex8.html#1280" class="Bound"
+      >m</a
+      ><a name="1311" class="Symbol"
+      >)</a
+      ><a name="1312"
+      >
+      </a
+      ><a name="1319" href="equality.reasoning.html#489" class="Function Operator"
+      >&#8801;&#10216;</a
+      ><a name="1321"
+      > </a
+      ><a name="1322" href="equality.core.html#364" class="Function"
+      >ap</a
+      ><a name="1324"
+      > </a
+      ><a name="1325" href="sets.nat.core.html#209" class="InductiveConstructor"
+      >suc</a
+      ><a name="1328"
+      > </a
+      ><a name="1329" href="chapter1.ex8.html#1282" class="Bound"
+      >ih</a
+      ><a name="1331"
+      > </a
+      ><a name="1332" href="equality.reasoning.html#489" class="Function Operator"
+      >&#10217;</a
+      ><a name="1333"
+      >
+        </a
+      ><a name="1342" href="sets.nat.core.html#209" class="InductiveConstructor"
+      >suc</a
+      ><a name="1345"
+      > </a
+      ><a name="1346" class="Symbol"
+      >(</a
+      ><a name="1347" href="chapter1.ex8.html#1280" class="Bound"
+      >m</a
+      ><a name="1348"
+      > </a
+      ><a name="1349" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="1350"
+      > </a
+      ><a name="1351" href="chapter1.ex8.html#1278" class="Bound"
+      >n</a
+      ><a name="1352" class="Symbol"
+      >)</a
+      ><a name="1353"
+      >
+      </a
+      ><a name="1360" href="equality.reasoning.html#489" class="Function Operator"
+      >&#8801;&#10216;</a
+      ><a name="1362"
+      > </a
+      ><a name="1363" href="chapter1.ex8.html#821" class="Function"
+      >+-suc</a
+      ><a name="1368"
+      > </a
+      ><a name="1369" href="chapter1.ex8.html#1280" class="Bound"
+      >m</a
+      ><a name="1370"
+      > </a
+      ><a name="1371" href="chapter1.ex8.html#1278" class="Bound"
+      >n</a
+      ><a name="1372"
+      > </a
+      ><a name="1373" href="equality.reasoning.html#489" class="Function Operator"
+      >&#10217;</a
+      ><a name="1374"
+      >
+        </a
+      ><a name="1383" href="chapter1.ex8.html#1280" class="Bound"
+      >m</a
+      ><a name="1384"
+      > </a
+      ><a name="1385" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="1386"
+      > </a
+      ><a name="1387" href="sets.nat.core.html#209" class="InductiveConstructor"
+      >suc</a
+      ><a name="1390"
+      > </a
+      ><a name="1391" href="chapter1.ex8.html#1278" class="Bound"
+      >n</a
+      ><a name="1392"
+      >
+      </a
+      ><a name="1399" href="equality.reasoning.html#594" class="Function Operator"
+      >&#8718;</a
+      ><a name="1400"
+      >
+
+</a
+      ><a name="1402" href="chapter1.ex8.html#1402" class="Function"
+      >*-left-unit</a
+      ><a name="1413"
+      > </a
+      ><a name="1414" class="Symbol"
+      >:</a
+      ><a name="1415"
+      > </a
+      ><a name="1416" class="Symbol"
+      >&#8704;</a
+      ><a name="1417"
+      > </a
+      ><a name="1418" href="chapter1.ex8.html#1418" class="Bound"
+      >n</a
+      ><a name="1419"
+      > </a
+      ><a name="1420" class="Symbol"
+      >&#8594;</a
+      ><a name="1421"
+      > </a
+      ><a name="1422" class="Number"
+      >1</a
+      ><a name="1423"
+      > </a
+      ><a name="1424" href="chapter1.ex8.html#368" class="Function Operator"
+      >*</a
+      ><a name="1425"
+      > </a
+      ><a name="1426" href="chapter1.ex8.html#1418" class="Bound"
+      >n</a
+      ><a name="1427"
+      > </a
+      ><a name="1428" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="1429"
+      > </a
+      ><a name="1430" href="chapter1.ex8.html#1418" class="Bound"
+      >n</a
+      ><a name="1431"
+      >
+</a
+      ><a name="1432" href="chapter1.ex8.html#1402" class="Function"
+      >*-left-unit</a
+      ><a name="1443"
+      > </a
+      ><a name="1444" class="Symbol"
+      >=</a
+      ><a name="1445"
+      > </a
+      ><a name="1446" href="chapter1.ex8.html#226" class="Function"
+      >ind</a
+      ><a name="1449"
+      > </a
+      ><a name="1450" class="Symbol"
+      >(&#955;</a
+      ><a name="1452"
+      > </a
+      ><a name="1453" href="chapter1.ex8.html#1453" class="Bound"
+      >n</a
+      ><a name="1454"
+      > </a
+      ><a name="1455" class="Symbol"
+      >&#8594;</a
+      ><a name="1456"
+      > </a
+      ><a name="1457" class="Number"
+      >1</a
+      ><a name="1458"
+      > </a
+      ><a name="1459" href="chapter1.ex8.html#368" class="Function Operator"
+      >*</a
+      ><a name="1460"
+      > </a
+      ><a name="1461" href="chapter1.ex8.html#1453" class="Bound"
+      >n</a
+      ><a name="1462"
+      > </a
+      ><a name="1463" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="1464"
+      > </a
+      ><a name="1465" href="chapter1.ex8.html#1453" class="Bound"
+      >n</a
+      ><a name="1466" class="Symbol"
+      >)</a
+      ><a name="1467"
+      > </a
+      ><a name="1468" href="equality.core.html#193" class="InductiveConstructor"
+      >refl</a
+      ><a name="1472"
+      > </a
+      ><a name="1473" class="Symbol"
+      >(&#955;</a
+      ><a name="1475"
+      > </a
+      ><a name="1476" href="chapter1.ex8.html#1476" class="Bound"
+      >_</a
+      ><a name="1477"
+      > </a
+      ><a name="1478" class="Symbol"
+      >&#8594;</a
+      ><a name="1479"
+      > </a
+      ><a name="1480" href="equality.core.html#364" class="Function"
+      >ap</a
+      ><a name="1482"
+      > </a
+      ><a name="1483" href="sets.nat.core.html#209" class="InductiveConstructor"
+      >suc</a
+      ><a name="1486" class="Symbol"
+      >)</a
+      ><a name="1487"
+      >
+
+</a
+      ><a name="1489" href="chapter1.ex8.html#1489" class="Function"
+      >*-right-unit</a
+      ><a name="1501"
+      > </a
+      ><a name="1502" class="Symbol"
+      >:</a
+      ><a name="1503"
+      > </a
+      ><a name="1504" class="Symbol"
+      >&#8704;</a
+      ><a name="1505"
+      > </a
+      ><a name="1506" href="chapter1.ex8.html#1506" class="Bound"
+      >n</a
+      ><a name="1507"
+      > </a
+      ><a name="1508" class="Symbol"
+      >&#8594;</a
+      ><a name="1509"
+      > </a
+      ><a name="1510" href="chapter1.ex8.html#1506" class="Bound"
+      >n</a
+      ><a name="1511"
+      > </a
+      ><a name="1512" href="chapter1.ex8.html#368" class="Function Operator"
+      >*</a
+      ><a name="1513"
+      > </a
+      ><a name="1514" class="Number"
+      >1</a
+      ><a name="1515"
+      > </a
+      ><a name="1516" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="1517"
+      > </a
+      ><a name="1518" href="chapter1.ex8.html#1506" class="Bound"
+      >n</a
+      ><a name="1519"
+      >
+</a
+      ><a name="1520" href="chapter1.ex8.html#1489" class="Function"
+      >*-right-unit</a
+      ><a name="1532"
+      > </a
+      ><a name="1533" href="chapter1.ex8.html#1533" class="Bound"
+      >n</a
+      ><a name="1534"
+      > </a
+      ><a name="1535" class="Symbol"
+      >=</a
+      ><a name="1536"
+      > </a
+      ><a name="1537" href="chapter1.ex8.html#529" class="Function"
+      >+-right-unit</a
+      ><a name="1549"
+      > </a
+      ><a name="1550" href="chapter1.ex8.html#1533" class="Bound"
+      >n</a
+      ><a name="1551"
+      >
+
+</a
+      ><a name="1553" href="chapter1.ex8.html#1553" class="Function"
+      >left-distr</a
+      ><a name="1563"
+      > </a
+      ><a name="1564" class="Symbol"
+      >:</a
+      ><a name="1565"
+      > </a
+      ><a name="1566" class="Symbol"
+      >&#8704;</a
+      ><a name="1567"
+      > </a
+      ><a name="1568" href="chapter1.ex8.html#1568" class="Bound"
+      >n</a
+      ><a name="1569"
+      > </a
+      ><a name="1570" href="chapter1.ex8.html#1570" class="Bound"
+      >m</a
+      ><a name="1571"
+      > </a
+      ><a name="1572" href="chapter1.ex8.html#1572" class="Bound"
+      >p</a
+      ><a name="1573"
+      > </a
+      ><a name="1574" class="Symbol"
+      >&#8594;</a
+      ><a name="1575"
+      > </a
+      ><a name="1576" href="chapter1.ex8.html#1568" class="Bound"
+      >n</a
+      ><a name="1577"
+      > </a
+      ><a name="1578" href="chapter1.ex8.html#368" class="Function Operator"
+      >*</a
+      ><a name="1579"
+      > </a
+      ><a name="1580" class="Symbol"
+      >(</a
+      ><a name="1581" href="chapter1.ex8.html#1570" class="Bound"
+      >m</a
+      ><a name="1582"
+      > </a
+      ><a name="1583" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="1584"
+      > </a
+      ><a name="1585" href="chapter1.ex8.html#1572" class="Bound"
+      >p</a
+      ><a name="1586" class="Symbol"
+      >)</a
+      ><a name="1587"
+      > </a
+      ><a name="1588" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="1589"
+      > </a
+      ><a name="1590" href="chapter1.ex8.html#1568" class="Bound"
+      >n</a
+      ><a name="1591"
+      > </a
+      ><a name="1592" href="chapter1.ex8.html#368" class="Function Operator"
+      >*</a
+      ><a name="1593"
+      > </a
+      ><a name="1594" href="chapter1.ex8.html#1570" class="Bound"
+      >m</a
+      ><a name="1595"
+      > </a
+      ><a name="1596" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="1597"
+      > </a
+      ><a name="1598" href="chapter1.ex8.html#1568" class="Bound"
+      >n</a
+      ><a name="1599"
+      > </a
+      ><a name="1600" href="chapter1.ex8.html#368" class="Function Operator"
+      >*</a
+      ><a name="1601"
+      > </a
+      ><a name="1602" href="chapter1.ex8.html#1572" class="Bound"
+      >p</a
+      ><a name="1603"
+      >
+</a
+      ><a name="1604" href="chapter1.ex8.html#1553" class="Function"
+      >left-distr</a
+      ><a name="1614"
+      > </a
+      ><a name="1615" href="chapter1.ex8.html#1615" class="Bound"
+      >n</a
+      ><a name="1616"
+      > </a
+      ><a name="1617" class="Symbol"
+      >=</a
+      ><a name="1618"
+      > </a
+      ><a name="1619" href="chapter1.ex8.html#226" class="Function"
+      >ind</a
+      ><a name="1622"
+      > </a
+      ><a name="1623" class="Symbol"
+      >(&#955;</a
+      ><a name="1625"
+      > </a
+      ><a name="1626" href="chapter1.ex8.html#1626" class="Bound"
+      >m</a
+      ><a name="1627"
+      > </a
+      ><a name="1628" class="Symbol"
+      >&#8594;</a
+      ><a name="1629"
+      > </a
+      ><a name="1630" class="Symbol"
+      >&#8704;</a
+      ><a name="1631"
+      > </a
+      ><a name="1632" href="chapter1.ex8.html#1632" class="Bound"
+      >p</a
+      ><a name="1633"
+      > </a
+      ><a name="1634" class="Symbol"
+      >&#8594;</a
+      ><a name="1635"
+      > </a
+      ><a name="1636" href="chapter1.ex8.html#1615" class="Bound"
+      >n</a
+      ><a name="1637"
+      > </a
+      ><a name="1638" href="chapter1.ex8.html#368" class="Function Operator"
+      >*</a
+      ><a name="1639"
+      > </a
+      ><a name="1640" class="Symbol"
+      >(</a
+      ><a name="1641" href="chapter1.ex8.html#1626" class="Bound"
+      >m</a
+      ><a name="1642"
+      > </a
+      ><a name="1643" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="1644"
+      > </a
+      ><a name="1645" href="chapter1.ex8.html#1632" class="Bound"
+      >p</a
+      ><a name="1646" class="Symbol"
+      >)</a
+      ><a name="1647"
+      > </a
+      ><a name="1648" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="1649"
+      > </a
+      ><a name="1650" href="chapter1.ex8.html#1615" class="Bound"
+      >n</a
+      ><a name="1651"
+      > </a
+      ><a name="1652" href="chapter1.ex8.html#368" class="Function Operator"
+      >*</a
+      ><a name="1653"
+      > </a
+      ><a name="1654" href="chapter1.ex8.html#1626" class="Bound"
+      >m</a
+      ><a name="1655"
+      > </a
+      ><a name="1656" href="sets.nat.core.html#362" class="Function Operator"
+      >+</a
+      ><a name="1657"
+      > </a
+      ><a name="1658" href="chapter1.ex8.html#1615" class="Bound"
+      >n</a
+      ><a name="1659"
+      > </a
+      ><a name="1660" href="chapter1.ex8.html#368" class="Function Operator"
+      >*</a
+      ><a name="1661"
+      > </a
+      ><a name="1662" href="chapter1.ex8.html#1632" class="Bound"
+      >p</a
+      ><a name="1663" class="Symbol"
+      >)</a
+      ><a name="1664"
+      >
+                   </a
+      ><a name="1684" class="Symbol"
+      >(&#955;</a
+      ><a name="1686"
+      > </a
+      ><a name="1687" href="chapter1.ex8.html#1687" class="Bound"
+      >_</a
+      ><a name="1688"
+      > </a
+      ><a name="1689" class="Symbol"
+      >&#8594;</a
+      ><a name="1690"
+      > </a
+      ><a name="1691" href="equality.core.html#193" class="InductiveConstructor"
+      >refl</a
+      ><a name="1695" class="Symbol"
+      >)</a
+      ><a name="1696"
+      >
+                   </a
+      ><a name="1716" class="Symbol"
+      >(&#955;</a
+      ><a name="1718"
+      > </a
+      ><a name="1719" href="chapter1.ex8.html#1719" class="Bound"
+      >m</a
+      ><a name="1720"
+      > </a
+      ><a name="1721" href="chapter1.ex8.html#1721" class="Bound"
+      >ih</a
+      ><a name="1723"
+      > </a
+      ><a name="1724" href="chapter1.ex8.html#1724" class="Bound"
+      >p</a
+      ><a name="1725"
+      > </a
+      ><a name="1726" class="Symbol"
+      >&#8594;</a
+      ><a name="1727"
+      > </a
+      ><a name="1728" href="equality.core.html#364" class="Function"
+      >ap</a
+      ><a name="1730"
+      > </a
+      ><a name="1731" class="Symbol"
+      >(</a
+      ><a name="1732" href="sets.nat.core.html#362" class="Function Operator"
+      >_+_</a
+      ><a name="1735"
+      > </a
+      ><a name="1736" href="chapter1.ex8.html#1615" class="Bound"
+      >n</a
+      ><a name="1737" class="Symbol"
+      >)</a
+      ><a name="1738"
+      > </a
+      ><a name="1739" class="Symbol"
+      >(</a
+      ><a name="1740" href="chapter1.ex8.html#1721" class="Bound"
+      >ih</a
+      ><a name="1742"
+      > </a
+      ><a name="1743" href="chapter1.ex8.html#1724" class="Bound"
+      >p</a
+      ><a name="1744" class="Symbol"
+      >)</a
+      ><a name="1745"
+      >
+                             </a
+      ><a name="1775" href="equality.groupoid.html#147" class="Function Operator"
+      >&#183;</a
+      ><a name="1776"
+      > </a
+      ><a name="1777" href="equality.core.html#207" class="Function"
+      >sym</a
+      ><a name="1780"
+      > </a
+      ><a name="1781" class="Symbol"
+      >(</a
+      ><a name="1782" href="chapter1.ex8.html#618" class="Function"
+      >+-associativity</a
+      ><a name="1797"
+      > </a
+      ><a name="1798" href="chapter1.ex8.html#1615" class="Bound"
+      >n</a
+      ><a name="1799"
+      > </a
+      ><a name="1800" class="Symbol"
+      >_</a
+      ><a name="1801"
+      > </a
+      ><a name="1802" class="Symbol"
+      >_))</a
+      ><a name="1805"
+      >
+
+</a
+      ><a name="1807" href="chapter1.ex8.html#1807" class="Function"
+      >*-associativity</a
+      ><a name="1822"
+      > </a
+      ><a name="1823" class="Symbol"
+      >:</a
+      ><a name="1824"
+      > </a
+      ><a name="1825" class="Symbol"
+      >&#8704;</a
+      ><a name="1826"
+      > </a
+      ><a name="1827" href="chapter1.ex8.html#1827" class="Bound"
+      >n</a
+      ><a name="1828"
+      > </a
+      ><a name="1829" href="chapter1.ex8.html#1829" class="Bound"
+      >m</a
+      ><a name="1830"
+      > </a
+      ><a name="1831" href="chapter1.ex8.html#1831" class="Bound"
+      >p</a
+      ><a name="1832"
+      > </a
+      ><a name="1833" class="Symbol"
+      >&#8594;</a
+      ><a name="1834"
+      > </a
+      ><a name="1835" href="chapter1.ex8.html#1827" class="Bound"
+      >n</a
+      ><a name="1836"
+      > </a
+      ><a name="1837" href="chapter1.ex8.html#368" class="Function Operator"
+      >*</a
+      ><a name="1838"
+      > </a
+      ><a name="1839" href="chapter1.ex8.html#1829" class="Bound"
+      >m</a
+      ><a name="1840"
+      > </a
+      ><a name="1841" href="chapter1.ex8.html#368" class="Function Operator"
+      >*</a
+      ><a name="1842"
+      > </a
+      ><a name="1843" href="chapter1.ex8.html#1831" class="Bound"
+      >p</a
+      ><a name="1844"
+      > </a
+      ><a name="1845" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="1846"
+      > </a
+      ><a name="1847" href="chapter1.ex8.html#1827" class="Bound"
+      >n</a
+      ><a name="1848"
+      > </a
+      ><a name="1849" href="chapter1.ex8.html#368" class="Function Operator"
+      >*</a
+      ><a name="1850"
+      > </a
+      ><a name="1851" class="Symbol"
+      >(</a
+      ><a name="1852" href="chapter1.ex8.html#1829" class="Bound"
+      >m</a
+      ><a name="1853"
+      > </a
+      ><a name="1854" href="chapter1.ex8.html#368" class="Function Operator"
+      >*</a
+      ><a name="1855"
+      > </a
+      ><a name="1856" href="chapter1.ex8.html#1831" class="Bound"
+      >p</a
+      ><a name="1857" class="Symbol"
+      >)</a
+      ><a name="1858"
+      >
+</a
+      ><a name="1859" href="chapter1.ex8.html#1807" class="Function"
+      >*-associativity</a
+      ><a name="1874"
+      > </a
+      ><a name="1875" href="chapter1.ex8.html#1875" class="Bound"
+      >n</a
+      ><a name="1876"
+      > </a
+      ><a name="1877" href="chapter1.ex8.html#1877" class="Bound"
+      >m</a
+      ><a name="1878"
+      > </a
+      ><a name="1879" class="Symbol"
+      >=</a
+      ><a name="1880"
+      > </a
+      ><a name="1881" href="chapter1.ex8.html#226" class="Function"
+      >ind</a
+      ><a name="1884"
+      > </a
+      ><a name="1885" class="Symbol"
+      >(&#955;</a
+      ><a name="1887"
+      > </a
+      ><a name="1888" href="chapter1.ex8.html#1888" class="Bound"
+      >p</a
+      ><a name="1889"
+      > </a
+      ><a name="1890" class="Symbol"
+      >&#8594;</a
+      ><a name="1891"
+      > </a
+      ><a name="1892" href="chapter1.ex8.html#1875" class="Bound"
+      >n</a
+      ><a name="1893"
+      > </a
+      ><a name="1894" href="chapter1.ex8.html#368" class="Function Operator"
+      >*</a
+      ><a name="1895"
+      > </a
+      ><a name="1896" href="chapter1.ex8.html#1877" class="Bound"
+      >m</a
+      ><a name="1897"
+      > </a
+      ><a name="1898" href="chapter1.ex8.html#368" class="Function Operator"
+      >*</a
+      ><a name="1899"
+      > </a
+      ><a name="1900" href="chapter1.ex8.html#1888" class="Bound"
+      >p</a
+      ><a name="1901"
+      > </a
+      ><a name="1902" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="1903"
+      > </a
+      ><a name="1904" href="chapter1.ex8.html#1875" class="Bound"
+      >n</a
+      ><a name="1905"
+      > </a
+      ><a name="1906" href="chapter1.ex8.html#368" class="Function Operator"
+      >*</a
+      ><a name="1907"
+      > </a
+      ><a name="1908" class="Symbol"
+      >(</a
+      ><a name="1909" href="chapter1.ex8.html#1877" class="Bound"
+      >m</a
+      ><a name="1910"
+      > </a
+      ><a name="1911" href="chapter1.ex8.html#368" class="Function Operator"
+      >*</a
+      ><a name="1912"
+      > </a
+      ><a name="1913" href="chapter1.ex8.html#1888" class="Bound"
+      >p</a
+      ><a name="1914" class="Symbol"
+      >))</a
+      ><a name="1916"
+      >
+                          </a
+      ><a name="1943" href="equality.core.html#193" class="InductiveConstructor"
+      >refl</a
+      ><a name="1947"
+      >
+                          </a
+      ><a name="1974" class="Symbol"
+      >(&#955;</a
+      ><a name="1976"
+      > </a
+      ><a name="1977" href="chapter1.ex8.html#1977" class="Bound"
+      >p</a
+      ><a name="1978"
+      > </a
+      ><a name="1979" href="chapter1.ex8.html#1979" class="Bound"
+      >ih</a
+      ><a name="1981"
+      > </a
+      ><a name="1982" class="Symbol"
+      >&#8594;</a
+      ><a name="1983"
+      > </a
+      ><a name="1984" href="equality.core.html#364" class="Function"
+      >ap</a
+      ><a name="1986"
+      > </a
+      ><a name="1987" class="Symbol"
+      >(</a
+      ><a name="1988" href="sets.nat.core.html#362" class="Function Operator"
+      >_+_</a
+      ><a name="1991"
+      > </a
+      ><a name="1992" class="Symbol"
+      >(</a
+      ><a name="1993" href="chapter1.ex8.html#1875" class="Bound"
+      >n</a
+      ><a name="1994"
+      > </a
+      ><a name="1995" href="chapter1.ex8.html#368" class="Function Operator"
+      >*</a
+      ><a name="1996"
+      > </a
+      ><a name="1997" href="chapter1.ex8.html#1877" class="Bound"
+      >m</a
+      ><a name="1998" class="Symbol"
+      >))</a
+      ><a name="2000"
+      > </a
+      ><a name="2001" href="chapter1.ex8.html#1979" class="Bound"
+      >ih</a
+      ><a name="2003"
+      >
+                                  </a
+      ><a name="2038" href="equality.groupoid.html#147" class="Function Operator"
+      >&#183;</a
+      ><a name="2039"
+      > </a
+      ><a name="2040" href="equality.core.html#207" class="Function"
+      >sym</a
+      ><a name="2043"
+      > </a
+      ><a name="2044" class="Symbol"
+      >(</a
+      ><a name="2045" href="chapter1.ex8.html#1553" class="Function"
+      >left-distr</a
+      ><a name="2055"
+      > </a
+      ><a name="2056" href="chapter1.ex8.html#1875" class="Bound"
+      >n</a
+      ><a name="2057"
+      > </a
+      ><a name="2058" href="chapter1.ex8.html#1877" class="Bound"
+      >m</a
+      ><a name="2059"
+      > </a
+      ><a name="2060" class="Symbol"
+      >(</a
+      ><a name="2061" href="chapter1.ex8.html#1877" class="Bound"
+      >m</a
+      ><a name="2062"
+      > </a
+      ><a name="2063" href="chapter1.ex8.html#368" class="Function Operator"
+      >*</a
+      ><a name="2064"
+      > </a
+      ><a name="2065" href="chapter1.ex8.html#1977" class="Bound"
+      >p</a
+      ><a name="2066" class="Symbol"
+      >)))</a
+      ><a name="2069"
+      >
+</a
+      ></pre
+    ></body
+  ></html
+>

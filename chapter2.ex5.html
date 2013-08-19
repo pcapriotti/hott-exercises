@@ -1,0 +1,803 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+><head
+  ><title
+    >chapter2.ex5</title
+    ><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+     /><meta http-equiv="Content-Style-Type" content="text/css"
+     /><link href="Agda.css" rel="stylesheet" type="text/css"
+     /></head
+  ><body
+  ><pre
+    ><a name="1" class="Symbol"
+      >{-#</a
+      ><a name="4"
+      > </a
+      ><a name="5" class="Keyword"
+      >OPTIONS</a
+      ><a name="12"
+      > --without-K </a
+      ><a name="25" class="Symbol"
+      >#-}</a
+      ><a name="28"
+      >
+
+</a
+      ><a name="30" class="Keyword"
+      >module</a
+      ><a name="36"
+      > </a
+      ><a name="37" href="chapter2.ex5.html#1" class="Module"
+      >chapter2.ex5</a
+      ><a name="49"
+      >
+  </a
+      ><a name="52" class="Symbol"
+      >{</a
+      ><a name="53" href="chapter2.ex5.html#53" class="Bound"
+      >i</a
+      ><a name="54"
+      > </a
+      ><a name="55" href="chapter2.ex5.html#55" class="Bound"
+      >j</a
+      ><a name="56" class="Symbol"
+      >}</a
+      ><a name="57"
+      > </a
+      ><a name="58" class="Symbol"
+      >{</a
+      ><a name="59" href="chapter2.ex5.html#59" class="Bound"
+      >A</a
+      ><a name="60"
+      > </a
+      ><a name="61" class="Symbol"
+      >:</a
+      ><a name="62"
+      > </a
+      ><a name="63" class="PrimitiveType"
+      >Set</a
+      ><a name="66"
+      > </a
+      ><a name="67" href="chapter2.ex5.html#53" class="Bound"
+      >i</a
+      ><a name="68" class="Symbol"
+      >}{</a
+      ><a name="70" href="chapter2.ex5.html#70" class="Bound"
+      >B</a
+      ><a name="71"
+      > </a
+      ><a name="72" class="Symbol"
+      >:</a
+      ><a name="73"
+      > </a
+      ><a name="74" class="PrimitiveType"
+      >Set</a
+      ><a name="77"
+      > </a
+      ><a name="78" href="chapter2.ex5.html#55" class="Bound"
+      >j</a
+      ><a name="79" class="Symbol"
+      >}</a
+      ><a name="80"
+      > </a
+      ><a name="81" class="Symbol"
+      >(</a
+      ><a name="82" href="chapter2.ex5.html#82" class="Bound"
+      >f</a
+      ><a name="83"
+      > </a
+      ><a name="84" class="Symbol"
+      >:</a
+      ><a name="85"
+      > </a
+      ><a name="86" href="chapter2.ex5.html#59" class="Bound"
+      >A</a
+      ><a name="87"
+      > </a
+      ><a name="88" class="Symbol"
+      >&#8594;</a
+      ><a name="89"
+      > </a
+      ><a name="90" href="chapter2.ex5.html#70" class="Bound"
+      >B</a
+      ><a name="91" class="Symbol"
+      >)</a
+      ><a name="92"
+      > </a
+      ><a name="93" class="Keyword"
+      >where</a
+      ><a name="98"
+      >
+
+</a
+      ><a name="100" class="Keyword"
+      >open</a
+      ><a name="104"
+      > </a
+      ><a name="105" class="Keyword"
+      >import</a
+      ><a name="111"
+      > </a
+      ><a name="112" href="equality.html#1" class="Module"
+      >equality</a
+      ><a name="120"
+      >
+
+</a
+      ><a name="122" href="chapter2.ex5.html#122" class="Function"
+      >u</a
+      ><a name="123"
+      > </a
+      ><a name="124" class="Symbol"
+      >:</a
+      ><a name="125"
+      > </a
+      ><a name="126" class="Symbol"
+      >{</a
+      ><a name="127" href="chapter2.ex5.html#127" class="Bound"
+      >x</a
+      ><a name="128"
+      > </a
+      ><a name="129" href="chapter2.ex5.html#129" class="Bound"
+      >y</a
+      ><a name="130"
+      > </a
+      ><a name="131" class="Symbol"
+      >:</a
+      ><a name="132"
+      > </a
+      ><a name="133" href="chapter2.ex5.html#59" class="Bound"
+      >A</a
+      ><a name="134" class="Symbol"
+      >}(</a
+      ><a name="136" href="chapter2.ex5.html#136" class="Bound"
+      >p</a
+      ><a name="137"
+      > </a
+      ><a name="138" class="Symbol"
+      >:</a
+      ><a name="139"
+      > </a
+      ><a name="140" href="chapter2.ex5.html#127" class="Bound"
+      >x</a
+      ><a name="141"
+      > </a
+      ><a name="142" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="143"
+      > </a
+      ><a name="144" href="chapter2.ex5.html#129" class="Bound"
+      >y</a
+      ><a name="145" class="Symbol"
+      >)</a
+      ><a name="146"
+      >
+  </a
+      ><a name="149" class="Symbol"
+      >&#8594;</a
+      ><a name="150"
+      > </a
+      ><a name="151" href="chapter2.ex5.html#82" class="Bound"
+      >f</a
+      ><a name="152"
+      > </a
+      ><a name="153" href="chapter2.ex5.html#127" class="Bound"
+      >x</a
+      ><a name="154"
+      > </a
+      ><a name="155" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="156"
+      > </a
+      ><a name="157" href="chapter2.ex5.html#82" class="Bound"
+      >f</a
+      ><a name="158"
+      > </a
+      ><a name="159" href="chapter2.ex5.html#129" class="Bound"
+      >y</a
+      ><a name="160"
+      >
+  </a
+      ><a name="163" class="Symbol"
+      >&#8594;</a
+      ><a name="164"
+      > </a
+      ><a name="165" href="equality.core.html#633" class="Function"
+      >subst</a
+      ><a name="170"
+      > </a
+      ><a name="171" class="Symbol"
+      >(&#955;</a
+      ><a name="173"
+      > </a
+      ><a name="174" href="chapter2.ex5.html#174" class="Bound"
+      >_</a
+      ><a name="175"
+      > </a
+      ><a name="176" class="Symbol"
+      >&#8594;</a
+      ><a name="177"
+      > </a
+      ><a name="178" href="chapter2.ex5.html#70" class="Bound"
+      >B</a
+      ><a name="179" class="Symbol"
+      >)</a
+      ><a name="180"
+      > </a
+      ><a name="181" href="chapter2.ex5.html#136" class="Bound"
+      >p</a
+      ><a name="182"
+      > </a
+      ><a name="183" class="Symbol"
+      >(</a
+      ><a name="184" href="chapter2.ex5.html#82" class="Bound"
+      >f</a
+      ><a name="185"
+      > </a
+      ><a name="186" href="chapter2.ex5.html#127" class="Bound"
+      >x</a
+      ><a name="187" class="Symbol"
+      >)</a
+      ><a name="188"
+      > </a
+      ><a name="189" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="190"
+      > </a
+      ><a name="191" href="chapter2.ex5.html#82" class="Bound"
+      >f</a
+      ><a name="192"
+      > </a
+      ><a name="193" href="chapter2.ex5.html#129" class="Bound"
+      >y</a
+      ><a name="194"
+      >
+</a
+      ><a name="195" href="chapter2.ex5.html#122" class="Function"
+      >u</a
+      ><a name="196"
+      > </a
+      ><a name="197" class="Symbol"
+      >{</a
+      ><a name="198" href="chapter2.ex5.html#198" class="Bound"
+      >x</a
+      ><a name="199" class="Symbol"
+      >}</a
+      ><a name="200"
+      > </a
+      ><a name="201" href="chapter2.ex5.html#201" class="Bound"
+      >p</a
+      ><a name="202"
+      > </a
+      ><a name="203" href="chapter2.ex5.html#203" class="Bound"
+      >q</a
+      ><a name="204"
+      > </a
+      ><a name="205" class="Symbol"
+      >=</a
+      ><a name="206"
+      > </a
+      ><a name="207" href="equality.calculus.html#1107" class="Function"
+      >subst-const</a
+      ><a name="218"
+      > </a
+      ><a name="219" href="chapter2.ex5.html#201" class="Bound"
+      >p</a
+      ><a name="220"
+      > </a
+      ><a name="221" class="Symbol"
+      >(</a
+      ><a name="222" href="chapter2.ex5.html#82" class="Bound"
+      >f</a
+      ><a name="223"
+      > </a
+      ><a name="224" href="chapter2.ex5.html#198" class="Bound"
+      >x</a
+      ><a name="225" class="Symbol"
+      >)</a
+      ><a name="226"
+      > </a
+      ><a name="227" href="equality.groupoid.html#147" class="Function Operator"
+      >&#183;</a
+      ><a name="228"
+      > </a
+      ><a name="229" href="chapter2.ex5.html#203" class="Bound"
+      >q</a
+      ><a name="230"
+      >
+
+</a
+      ><a name="232" href="chapter2.ex5.html#232" class="Function"
+      >v</a
+      ><a name="233"
+      > </a
+      ><a name="234" class="Symbol"
+      >:</a
+      ><a name="235"
+      > </a
+      ><a name="236" class="Symbol"
+      >{</a
+      ><a name="237" href="chapter2.ex5.html#237" class="Bound"
+      >x</a
+      ><a name="238"
+      > </a
+      ><a name="239" href="chapter2.ex5.html#239" class="Bound"
+      >y</a
+      ><a name="240"
+      > </a
+      ><a name="241" class="Symbol"
+      >:</a
+      ><a name="242"
+      > </a
+      ><a name="243" href="chapter2.ex5.html#59" class="Bound"
+      >A</a
+      ><a name="244" class="Symbol"
+      >}(</a
+      ><a name="246" href="chapter2.ex5.html#246" class="Bound"
+      >p</a
+      ><a name="247"
+      > </a
+      ><a name="248" class="Symbol"
+      >:</a
+      ><a name="249"
+      > </a
+      ><a name="250" href="chapter2.ex5.html#237" class="Bound"
+      >x</a
+      ><a name="251"
+      > </a
+      ><a name="252" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="253"
+      > </a
+      ><a name="254" href="chapter2.ex5.html#239" class="Bound"
+      >y</a
+      ><a name="255" class="Symbol"
+      >)</a
+      ><a name="256"
+      >
+  </a
+      ><a name="259" class="Symbol"
+      >&#8594;</a
+      ><a name="260"
+      > </a
+      ><a name="261" href="equality.core.html#633" class="Function"
+      >subst</a
+      ><a name="266"
+      > </a
+      ><a name="267" class="Symbol"
+      >(&#955;</a
+      ><a name="269"
+      > </a
+      ><a name="270" href="chapter2.ex5.html#270" class="Bound"
+      >_</a
+      ><a name="271"
+      > </a
+      ><a name="272" class="Symbol"
+      >&#8594;</a
+      ><a name="273"
+      > </a
+      ><a name="274" href="chapter2.ex5.html#70" class="Bound"
+      >B</a
+      ><a name="275" class="Symbol"
+      >)</a
+      ><a name="276"
+      > </a
+      ><a name="277" href="chapter2.ex5.html#246" class="Bound"
+      >p</a
+      ><a name="278"
+      > </a
+      ><a name="279" class="Symbol"
+      >(</a
+      ><a name="280" href="chapter2.ex5.html#82" class="Bound"
+      >f</a
+      ><a name="281"
+      > </a
+      ><a name="282" href="chapter2.ex5.html#237" class="Bound"
+      >x</a
+      ><a name="283" class="Symbol"
+      >)</a
+      ><a name="284"
+      > </a
+      ><a name="285" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="286"
+      > </a
+      ><a name="287" href="chapter2.ex5.html#82" class="Bound"
+      >f</a
+      ><a name="288"
+      > </a
+      ><a name="289" href="chapter2.ex5.html#239" class="Bound"
+      >y</a
+      ><a name="290"
+      >
+  </a
+      ><a name="293" class="Symbol"
+      >&#8594;</a
+      ><a name="294"
+      > </a
+      ><a name="295" href="chapter2.ex5.html#82" class="Bound"
+      >f</a
+      ><a name="296"
+      > </a
+      ><a name="297" href="chapter2.ex5.html#237" class="Bound"
+      >x</a
+      ><a name="298"
+      > </a
+      ><a name="299" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="300"
+      > </a
+      ><a name="301" href="chapter2.ex5.html#82" class="Bound"
+      >f</a
+      ><a name="302"
+      > </a
+      ><a name="303" href="chapter2.ex5.html#239" class="Bound"
+      >y</a
+      ><a name="304"
+      >
+</a
+      ><a name="305" href="chapter2.ex5.html#232" class="Function"
+      >v</a
+      ><a name="306"
+      > </a
+      ><a name="307" class="Symbol"
+      >{</a
+      ><a name="308" href="chapter2.ex5.html#308" class="Bound"
+      >x</a
+      ><a name="309" class="Symbol"
+      >}</a
+      ><a name="310"
+      > </a
+      ><a name="311" href="chapter2.ex5.html#311" class="Bound"
+      >p</a
+      ><a name="312"
+      > </a
+      ><a name="313" href="chapter2.ex5.html#313" class="Bound"
+      >q</a
+      ><a name="314"
+      > </a
+      ><a name="315" class="Symbol"
+      >=</a
+      ><a name="316"
+      > </a
+      ><a name="317" href="equality.core.html#207" class="Function"
+      >sym</a
+      ><a name="320"
+      > </a
+      ><a name="321" class="Symbol"
+      >(</a
+      ><a name="322" href="equality.calculus.html#1107" class="Function"
+      >subst-const</a
+      ><a name="333"
+      > </a
+      ><a name="334" href="chapter2.ex5.html#311" class="Bound"
+      >p</a
+      ><a name="335"
+      > </a
+      ><a name="336" class="Symbol"
+      >(</a
+      ><a name="337" href="chapter2.ex5.html#82" class="Bound"
+      >f</a
+      ><a name="338"
+      > </a
+      ><a name="339" href="chapter2.ex5.html#308" class="Bound"
+      >x</a
+      ><a name="340" class="Symbol"
+      >))</a
+      ><a name="342"
+      > </a
+      ><a name="343" href="equality.groupoid.html#147" class="Function Operator"
+      >&#183;</a
+      ><a name="344"
+      > </a
+      ><a name="345" href="chapter2.ex5.html#313" class="Bound"
+      >q</a
+      ><a name="346"
+      >
+
+</a
+      ><a name="348" href="chapter2.ex5.html#348" class="Function"
+      >&#945;</a
+      ><a name="349"
+      > </a
+      ><a name="350" class="Symbol"
+      >:</a
+      ><a name="351"
+      > </a
+      ><a name="352" class="Symbol"
+      >{</a
+      ><a name="353" href="chapter2.ex5.html#353" class="Bound"
+      >x</a
+      ><a name="354"
+      > </a
+      ><a name="355" href="chapter2.ex5.html#355" class="Bound"
+      >y</a
+      ><a name="356"
+      > </a
+      ><a name="357" class="Symbol"
+      >:</a
+      ><a name="358"
+      > </a
+      ><a name="359" href="chapter2.ex5.html#59" class="Bound"
+      >A</a
+      ><a name="360" class="Symbol"
+      >}(</a
+      ><a name="362" href="chapter2.ex5.html#362" class="Bound"
+      >p</a
+      ><a name="363"
+      > </a
+      ><a name="364" class="Symbol"
+      >:</a
+      ><a name="365"
+      > </a
+      ><a name="366" href="chapter2.ex5.html#353" class="Bound"
+      >x</a
+      ><a name="367"
+      > </a
+      ><a name="368" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="369"
+      > </a
+      ><a name="370" href="chapter2.ex5.html#355" class="Bound"
+      >y</a
+      ><a name="371" class="Symbol"
+      >)(</a
+      ><a name="373" href="chapter2.ex5.html#373" class="Bound"
+      >q</a
+      ><a name="374"
+      > </a
+      ><a name="375" class="Symbol"
+      >:</a
+      ><a name="376"
+      > </a
+      ><a name="377" href="chapter2.ex5.html#82" class="Bound"
+      >f</a
+      ><a name="378"
+      > </a
+      ><a name="379" href="chapter2.ex5.html#353" class="Bound"
+      >x</a
+      ><a name="380"
+      > </a
+      ><a name="381" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="382"
+      > </a
+      ><a name="383" href="chapter2.ex5.html#82" class="Bound"
+      >f</a
+      ><a name="384"
+      > </a
+      ><a name="385" href="chapter2.ex5.html#355" class="Bound"
+      >y</a
+      ><a name="386" class="Symbol"
+      >)</a
+      ><a name="387"
+      >
+  </a
+      ><a name="390" class="Symbol"
+      >&#8594;</a
+      ><a name="391"
+      > </a
+      ><a name="392" href="chapter2.ex5.html#232" class="Function"
+      >v</a
+      ><a name="393"
+      > </a
+      ><a name="394" href="chapter2.ex5.html#362" class="Bound"
+      >p</a
+      ><a name="395"
+      > </a
+      ><a name="396" class="Symbol"
+      >(</a
+      ><a name="397" href="chapter2.ex5.html#122" class="Function"
+      >u</a
+      ><a name="398"
+      > </a
+      ><a name="399" href="chapter2.ex5.html#362" class="Bound"
+      >p</a
+      ><a name="400"
+      > </a
+      ><a name="401" href="chapter2.ex5.html#373" class="Bound"
+      >q</a
+      ><a name="402" class="Symbol"
+      >)</a
+      ><a name="403"
+      > </a
+      ><a name="404" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="405"
+      > </a
+      ><a name="406" href="chapter2.ex5.html#373" class="Bound"
+      >q</a
+      ><a name="407"
+      >
+</a
+      ><a name="408" href="chapter2.ex5.html#348" class="Function"
+      >&#945;</a
+      ><a name="409"
+      > </a
+      ><a name="410" href="equality.core.html#193" class="InductiveConstructor"
+      >refl</a
+      ><a name="414"
+      > </a
+      ><a name="415" href="chapter2.ex5.html#415" class="Bound"
+      >q</a
+      ><a name="416"
+      > </a
+      ><a name="417" class="Symbol"
+      >=</a
+      ><a name="418"
+      > </a
+      ><a name="419" href="equality.core.html#193" class="InductiveConstructor"
+      >refl</a
+      ><a name="423"
+      >
+
+</a
+      ><a name="425" href="chapter2.ex5.html#425" class="Function"
+      >&#946;</a
+      ><a name="426"
+      > </a
+      ><a name="427" class="Symbol"
+      >:</a
+      ><a name="428"
+      > </a
+      ><a name="429" class="Symbol"
+      >{</a
+      ><a name="430" href="chapter2.ex5.html#430" class="Bound"
+      >x</a
+      ><a name="431"
+      > </a
+      ><a name="432" href="chapter2.ex5.html#432" class="Bound"
+      >y</a
+      ><a name="433"
+      > </a
+      ><a name="434" class="Symbol"
+      >:</a
+      ><a name="435"
+      > </a
+      ><a name="436" href="chapter2.ex5.html#59" class="Bound"
+      >A</a
+      ><a name="437" class="Symbol"
+      >}(</a
+      ><a name="439" href="chapter2.ex5.html#439" class="Bound"
+      >p</a
+      ><a name="440"
+      > </a
+      ><a name="441" class="Symbol"
+      >:</a
+      ><a name="442"
+      > </a
+      ><a name="443" href="chapter2.ex5.html#430" class="Bound"
+      >x</a
+      ><a name="444"
+      > </a
+      ><a name="445" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="446"
+      > </a
+      ><a name="447" href="chapter2.ex5.html#432" class="Bound"
+      >y</a
+      ><a name="448" class="Symbol"
+      >)(</a
+      ><a name="450" href="chapter2.ex5.html#450" class="Bound"
+      >q</a
+      ><a name="451"
+      > </a
+      ><a name="452" class="Symbol"
+      >:</a
+      ><a name="453"
+      > </a
+      ><a name="454" href="equality.core.html#633" class="Function"
+      >subst</a
+      ><a name="459"
+      > </a
+      ><a name="460" class="Symbol"
+      >(&#955;</a
+      ><a name="462"
+      > </a
+      ><a name="463" href="chapter2.ex5.html#463" class="Bound"
+      >_</a
+      ><a name="464"
+      > </a
+      ><a name="465" class="Symbol"
+      >&#8594;</a
+      ><a name="466"
+      > </a
+      ><a name="467" href="chapter2.ex5.html#70" class="Bound"
+      >B</a
+      ><a name="468" class="Symbol"
+      >)</a
+      ><a name="469"
+      > </a
+      ><a name="470" href="chapter2.ex5.html#439" class="Bound"
+      >p</a
+      ><a name="471"
+      > </a
+      ><a name="472" class="Symbol"
+      >(</a
+      ><a name="473" href="chapter2.ex5.html#82" class="Bound"
+      >f</a
+      ><a name="474"
+      > </a
+      ><a name="475" href="chapter2.ex5.html#430" class="Bound"
+      >x</a
+      ><a name="476" class="Symbol"
+      >)</a
+      ><a name="477"
+      > </a
+      ><a name="478" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="479"
+      > </a
+      ><a name="480" href="chapter2.ex5.html#82" class="Bound"
+      >f</a
+      ><a name="481"
+      > </a
+      ><a name="482" href="chapter2.ex5.html#432" class="Bound"
+      >y</a
+      ><a name="483" class="Symbol"
+      >)</a
+      ><a name="484"
+      >
+  </a
+      ><a name="487" class="Symbol"
+      >&#8594;</a
+      ><a name="488"
+      > </a
+      ><a name="489" href="chapter2.ex5.html#122" class="Function"
+      >u</a
+      ><a name="490"
+      > </a
+      ><a name="491" href="chapter2.ex5.html#439" class="Bound"
+      >p</a
+      ><a name="492"
+      > </a
+      ><a name="493" class="Symbol"
+      >(</a
+      ><a name="494" href="chapter2.ex5.html#232" class="Function"
+      >v</a
+      ><a name="495"
+      > </a
+      ><a name="496" href="chapter2.ex5.html#439" class="Bound"
+      >p</a
+      ><a name="497"
+      > </a
+      ><a name="498" href="chapter2.ex5.html#450" class="Bound"
+      >q</a
+      ><a name="499" class="Symbol"
+      >)</a
+      ><a name="500"
+      > </a
+      ><a name="501" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="502"
+      > </a
+      ><a name="503" href="chapter2.ex5.html#450" class="Bound"
+      >q</a
+      ><a name="504"
+      >
+</a
+      ><a name="505" href="chapter2.ex5.html#425" class="Function"
+      >&#946;</a
+      ><a name="506"
+      > </a
+      ><a name="507" href="equality.core.html#193" class="InductiveConstructor"
+      >refl</a
+      ><a name="511"
+      > </a
+      ><a name="512" href="chapter2.ex5.html#512" class="Bound"
+      >q</a
+      ><a name="513"
+      > </a
+      ><a name="514" class="Symbol"
+      >=</a
+      ><a name="515"
+      > </a
+      ><a name="516" href="equality.core.html#193" class="InductiveConstructor"
+      >refl</a
+      ><a name="520"
+      >
+</a
+      ></pre
+    ></body
+  ></html
+>

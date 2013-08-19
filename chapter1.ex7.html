@@ -1,0 +1,414 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+><head
+  ><title
+    >chapter1.ex7</title
+    ><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+     /><meta http-equiv="Content-Style-Type" content="text/css"
+     /><link href="Agda.css" rel="stylesheet" type="text/css"
+     /></head
+  ><body
+  ><pre
+    ><a name="1" class="Symbol"
+      >{-#</a
+      ><a name="4"
+      > </a
+      ><a name="5" class="Keyword"
+      >OPTIONS</a
+      ><a name="12"
+      > --without-K </a
+      ><a name="25" class="Symbol"
+      >#-}</a
+      ><a name="28"
+      >
+
+</a
+      ><a name="30" class="Keyword"
+      >module</a
+      ><a name="36"
+      > </a
+      ><a name="37" href="chapter1.ex7.html#1" class="Module"
+      >chapter1.ex7</a
+      ><a name="49"
+      > </a
+      ><a name="50" class="Keyword"
+      >where</a
+      ><a name="55"
+      >
+
+</a
+      ><a name="57" class="Keyword"
+      >open</a
+      ><a name="61"
+      > </a
+      ><a name="62" class="Keyword"
+      >import</a
+      ><a name="68"
+      > </a
+      ><a name="69" href="sum.html#1" class="Module"
+      >sum</a
+      ><a name="72"
+      >
+</a
+      ><a name="73" class="Keyword"
+      >open</a
+      ><a name="77"
+      > </a
+      ><a name="78" class="Keyword"
+      >import</a
+      ><a name="84"
+      > </a
+      ><a name="85" href="equality.html#1" class="Module"
+      >equality</a
+      ><a name="93"
+      >
+</a
+      ><a name="94" class="Keyword"
+      >open</a
+      ><a name="98"
+      > </a
+      ><a name="99" class="Keyword"
+      >import</a
+      ><a name="105"
+      > </a
+      ><a name="106" href="hott.hlevel.core.html#1" class="Module"
+      >hott.hlevel.core</a
+      ><a name="122"
+      >
+
+</a
+      ><a name="124" href="chapter1.ex7.html#124" class="Function"
+      >ind'</a
+      ><a name="128"
+      > </a
+      ><a name="129" class="Symbol"
+      >:</a
+      ><a name="130"
+      > </a
+      ><a name="131" class="Symbol"
+      >&#8704;</a
+      ><a name="132"
+      > </a
+      ><a name="133" class="Symbol"
+      >{</a
+      ><a name="134" href="chapter1.ex7.html#134" class="Bound"
+      >i</a
+      ><a name="135"
+      > </a
+      ><a name="136" href="chapter1.ex7.html#136" class="Bound"
+      >j</a
+      ><a name="137" class="Symbol"
+      >}{</a
+      ><a name="139" href="chapter1.ex7.html#139" class="Bound"
+      >X</a
+      ><a name="140"
+      > </a
+      ><a name="141" class="Symbol"
+      >:</a
+      ><a name="142"
+      > </a
+      ><a name="143" class="PrimitiveType"
+      >Set</a
+      ><a name="146"
+      > </a
+      ><a name="147" href="chapter1.ex7.html#134" class="Bound"
+      >i</a
+      ><a name="148" class="Symbol"
+      >}{</a
+      ><a name="150" href="chapter1.ex7.html#150" class="Bound"
+      >x</a
+      ><a name="151"
+      > </a
+      ><a name="152" class="Symbol"
+      >:</a
+      ><a name="153"
+      > </a
+      ><a name="154" href="chapter1.ex7.html#139" class="Bound"
+      >X</a
+      ><a name="155" class="Symbol"
+      >}</a
+      ><a name="156"
+      >
+     </a
+      ><a name="162" class="Symbol"
+      >&#8594;</a
+      ><a name="163"
+      > </a
+      ><a name="164" class="Symbol"
+      >(</a
+      ><a name="165" href="chapter1.ex7.html#165" class="Bound"
+      >P</a
+      ><a name="166"
+      > </a
+      ><a name="167" class="Symbol"
+      >:</a
+      ><a name="168"
+      > </a
+      ><a name="169" class="Symbol"
+      >(</a
+      ><a name="170" href="chapter1.ex7.html#170" class="Bound"
+      >y</a
+      ><a name="171"
+      > </a
+      ><a name="172" class="Symbol"
+      >:</a
+      ><a name="173"
+      > </a
+      ><a name="174" href="chapter1.ex7.html#139" class="Bound"
+      >X</a
+      ><a name="175" class="Symbol"
+      >)</a
+      ><a name="176"
+      > </a
+      ><a name="177" class="Symbol"
+      >&#8594;</a
+      ><a name="178"
+      > </a
+      ><a name="179" href="chapter1.ex7.html#150" class="Bound"
+      >x</a
+      ><a name="180"
+      > </a
+      ><a name="181" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="182"
+      > </a
+      ><a name="183" href="chapter1.ex7.html#170" class="Bound"
+      >y</a
+      ><a name="184"
+      > </a
+      ><a name="185" class="Symbol"
+      >&#8594;</a
+      ><a name="186"
+      > </a
+      ><a name="187" class="PrimitiveType"
+      >Set</a
+      ><a name="190"
+      > </a
+      ><a name="191" href="chapter1.ex7.html#136" class="Bound"
+      >j</a
+      ><a name="192" class="Symbol"
+      >)</a
+      ><a name="193"
+      >
+     </a
+      ><a name="199" class="Symbol"
+      >&#8594;</a
+      ><a name="200"
+      > </a
+      ><a name="201" href="chapter1.ex7.html#165" class="Bound"
+      >P</a
+      ><a name="202"
+      > </a
+      ><a name="203" href="chapter1.ex7.html#150" class="Bound"
+      >x</a
+      ><a name="204"
+      > </a
+      ><a name="205" href="equality.core.html#193" class="InductiveConstructor"
+      >refl</a
+      ><a name="209"
+      >
+     </a
+      ><a name="215" class="Symbol"
+      >&#8594;</a
+      ><a name="216"
+      > </a
+      ><a name="217" class="Symbol"
+      >(</a
+      ><a name="218" href="chapter1.ex7.html#218" class="Bound"
+      >y</a
+      ><a name="219"
+      > </a
+      ><a name="220" class="Symbol"
+      >:</a
+      ><a name="221"
+      > </a
+      ><a name="222" href="chapter1.ex7.html#139" class="Bound"
+      >X</a
+      ><a name="223" class="Symbol"
+      >)</a
+      ><a name="224"
+      >
+     </a
+      ><a name="230" class="Symbol"
+      >&#8594;</a
+      ><a name="231"
+      > </a
+      ><a name="232" class="Symbol"
+      >(</a
+      ><a name="233" href="chapter1.ex7.html#233" class="Bound"
+      >p</a
+      ><a name="234"
+      > </a
+      ><a name="235" class="Symbol"
+      >:</a
+      ><a name="236"
+      > </a
+      ><a name="237" href="chapter1.ex7.html#150" class="Bound"
+      >x</a
+      ><a name="238"
+      > </a
+      ><a name="239" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="240"
+      > </a
+      ><a name="241" href="chapter1.ex7.html#218" class="Bound"
+      >y</a
+      ><a name="242" class="Symbol"
+      >)</a
+      ><a name="243"
+      >
+     </a
+      ><a name="249" class="Symbol"
+      >&#8594;</a
+      ><a name="250"
+      > </a
+      ><a name="251" href="chapter1.ex7.html#165" class="Bound"
+      >P</a
+      ><a name="252"
+      > </a
+      ><a name="253" href="chapter1.ex7.html#218" class="Bound"
+      >y</a
+      ><a name="254"
+      > </a
+      ><a name="255" href="chapter1.ex7.html#233" class="Bound"
+      >p</a
+      ><a name="256"
+      >
+</a
+      ><a name="257" href="chapter1.ex7.html#124" class="Function"
+      >ind'</a
+      ><a name="261"
+      > </a
+      ><a name="262" class="Symbol"
+      >{</a
+      ><a name="263"
+      >X </a
+      ><a name="265" class="Symbol"
+      >=</a
+      ><a name="266"
+      > </a
+      ><a name="267" href="chapter1.ex7.html#267" class="Bound"
+      >X</a
+      ><a name="268" class="Symbol"
+      >}{</a
+      ><a name="270"
+      >x </a
+      ><a name="272" class="Symbol"
+      >=</a
+      ><a name="273"
+      > </a
+      ><a name="274" href="chapter1.ex7.html#274" class="Bound"
+      >x</a
+      ><a name="275" class="Symbol"
+      >}</a
+      ><a name="276"
+      > </a
+      ><a name="277" href="chapter1.ex7.html#277" class="Bound"
+      >P</a
+      ><a name="278"
+      > </a
+      ><a name="279" href="chapter1.ex7.html#279" class="Bound"
+      >d</a
+      ><a name="280"
+      > </a
+      ><a name="281" href="chapter1.ex7.html#281" class="Bound"
+      >y</a
+      ><a name="282"
+      > </a
+      ><a name="283" href="chapter1.ex7.html#283" class="Bound"
+      >p</a
+      ><a name="284"
+      > </a
+      ><a name="285" class="Symbol"
+      >=</a
+      ><a name="286"
+      >
+  </a
+      ><a name="289" href="equality.core.html#633" class="Function"
+      >subst</a
+      ><a name="294"
+      > </a
+      ><a name="295" class="Symbol"
+      >(&#955;</a
+      ><a name="297"
+      > </a
+      ><a name="298" class="Symbol"
+      >{(</a
+      ><a name="300" href="chapter1.ex7.html#300" class="Bound"
+      >y</a
+      ><a name="301"
+      > </a
+      ><a name="302" href="sum.html#203" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="303"
+      > </a
+      ><a name="304" href="chapter1.ex7.html#304" class="Bound"
+      >p</a
+      ><a name="305" class="Symbol"
+      >)</a
+      ><a name="306"
+      > </a
+      ><a name="307" class="Symbol"
+      >&#8594;</a
+      ><a name="308"
+      > </a
+      ><a name="309" href="chapter1.ex7.html#277" class="Bound"
+      >P</a
+      ><a name="310"
+      > </a
+      ><a name="311" href="chapter1.ex7.html#300" class="Bound"
+      >y</a
+      ><a name="312"
+      > </a
+      ><a name="313" href="chapter1.ex7.html#304" class="Bound"
+      >p</a
+      ><a name="314"
+      > </a
+      ><a name="315" class="Symbol"
+      >})</a
+      ><a name="317"
+      >
+        </a
+      ><a name="326" class="Symbol"
+      >(</a
+      ><a name="327" href="sum.html#233" class="Function"
+      >proj&#8322;</a
+      ><a name="332"
+      > </a
+      ><a name="333" class="Symbol"
+      >(</a
+      ><a name="334" href="hott.hlevel.core.html#1874" class="Function"
+      >singl-contr</a
+      ><a name="345"
+      > </a
+      ><a name="346" href="chapter1.ex7.html#274" class="Bound"
+      >x</a
+      ><a name="347" class="Symbol"
+      >)</a
+      ><a name="348"
+      > </a
+      ><a name="349" class="Symbol"
+      >(</a
+      ><a name="350" href="chapter1.ex7.html#281" class="Bound"
+      >y</a
+      ><a name="351"
+      > </a
+      ><a name="352" href="sum.html#203" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="353"
+      > </a
+      ><a name="354" href="chapter1.ex7.html#283" class="Bound"
+      >p</a
+      ><a name="355" class="Symbol"
+      >))</a
+      ><a name="357"
+      > </a
+      ><a name="358" href="chapter1.ex7.html#279" class="Bound"
+      >d</a
+      ><a name="359"
+      >
+</a
+      ></pre
+    ></body
+  ></html
+>

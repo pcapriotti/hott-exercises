@@ -1,0 +1,1922 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+><head
+  ><title
+    >chapter3.ex19</title
+    ><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+     /><meta http-equiv="Content-Style-Type" content="text/css"
+     /><link href="Agda.css" rel="stylesheet" type="text/css"
+     /></head
+  ><body
+  ><pre
+    ><a name="1" class="Symbol"
+      >{-#</a
+      ><a name="4"
+      > </a
+      ><a name="5" class="Keyword"
+      >OPTIONS</a
+      ><a name="12"
+      > --without-K </a
+      ><a name="25" class="Symbol"
+      >#-}</a
+      ><a name="28"
+      >
+</a
+      ><a name="29" class="Keyword"
+      >module</a
+      ><a name="35"
+      > </a
+      ><a name="36" href="chapter3.ex19.html#1" class="Module"
+      >chapter3.ex19</a
+      ><a name="49"
+      > </a
+      ><a name="50" class="Keyword"
+      >where</a
+      ><a name="55"
+      >
+
+</a
+      ><a name="57" class="Keyword"
+      >open</a
+      ><a name="61"
+      > </a
+      ><a name="62" class="Keyword"
+      >import</a
+      ><a name="68"
+      > </a
+      ><a name="69" href="sum.html#1" class="Module"
+      >sum</a
+      ><a name="72"
+      >
+</a
+      ><a name="73" class="Keyword"
+      >open</a
+      ><a name="77"
+      > </a
+      ><a name="78" class="Keyword"
+      >import</a
+      ><a name="84"
+      > </a
+      ><a name="85" href="decidable.html#1" class="Module"
+      >decidable</a
+      ><a name="94"
+      >
+</a
+      ><a name="95" class="Keyword"
+      >open</a
+      ><a name="99"
+      > </a
+      ><a name="100" class="Keyword"
+      >import</a
+      ><a name="106"
+      > </a
+      ><a name="107" href="equality.html#1" class="Module"
+      >equality</a
+      ><a name="115"
+      >
+</a
+      ><a name="116" class="Keyword"
+      >open</a
+      ><a name="120"
+      > </a
+      ><a name="121" class="Keyword"
+      >import</a
+      ><a name="127"
+      > </a
+      ><a name="128" href="hott.html#1" class="Module"
+      >hott</a
+      ><a name="132"
+      >
+</a
+      ><a name="133" class="Keyword"
+      >open</a
+      ><a name="137"
+      > </a
+      ><a name="138" class="Keyword"
+      >import</a
+      ><a name="144"
+      > </a
+      ><a name="145" href="sets.nat.html#1" class="Module"
+      >sets.nat</a
+      ><a name="153"
+      >
+</a
+      ><a name="154" class="Keyword"
+      >open</a
+      ><a name="158"
+      > </a
+      ><a name="159" class="Keyword"
+      >import</a
+      ><a name="165"
+      > </a
+      ><a name="166" href="sets.fin.html#1" class="Module"
+      >sets.fin</a
+      ><a name="174"
+      >
+</a
+      ><a name="175" class="Keyword"
+      >open</a
+      ><a name="179"
+      > </a
+      ><a name="180" class="Keyword"
+      >import</a
+      ><a name="186"
+      > </a
+      ><a name="187" href="sets.empty.html#1" class="Module"
+      >sets.empty</a
+      ><a name="197"
+      >
+
+</a
+      ><a name="199" class="Keyword"
+      >module</a
+      ><a name="205"
+      > </a
+      ><a name="206" href="chapter3.ex19.html#206" class="Module"
+      >_</a
+      ><a name="207"
+      > </a
+      ><a name="208" class="Symbol"
+      >{</a
+      ><a name="209" href="chapter3.ex19.html#209" class="Bound"
+      >i</a
+      ><a name="210" class="Symbol"
+      >}(</a
+      ><a name="212" href="chapter3.ex19.html#212" class="Bound"
+      >P</a
+      ><a name="213"
+      > </a
+      ><a name="214" class="Symbol"
+      >:</a
+      ><a name="215"
+      > </a
+      ><a name="216" href="sets.nat.core.html#182" class="Datatype"
+      >&#8469;</a
+      ><a name="217"
+      > </a
+      ><a name="218" class="Symbol"
+      >&#8594;</a
+      ><a name="219"
+      > </a
+      ><a name="220" class="PrimitiveType"
+      >Set</a
+      ><a name="223"
+      > </a
+      ><a name="224" href="chapter3.ex19.html#209" class="Bound"
+      >i</a
+      ><a name="225" class="Symbol"
+      >)</a
+      ><a name="226"
+      >
+         </a
+      ><a name="236" class="Symbol"
+      >(</a
+      ><a name="237" href="chapter3.ex19.html#237" class="Bound"
+      >hP</a
+      ><a name="239"
+      > </a
+      ><a name="240" class="Symbol"
+      >:</a
+      ><a name="241"
+      > </a
+      ><a name="242" class="Symbol"
+      >(</a
+      ><a name="243" href="chapter3.ex19.html#243" class="Bound"
+      >n</a
+      ><a name="244"
+      > </a
+      ><a name="245" class="Symbol"
+      >:</a
+      ><a name="246"
+      > </a
+      ><a name="247" href="sets.nat.core.html#182" class="Datatype"
+      >&#8469;</a
+      ><a name="248" class="Symbol"
+      >)</a
+      ><a name="249"
+      > </a
+      ><a name="250" class="Symbol"
+      >&#8594;</a
+      ><a name="251"
+      > </a
+      ><a name="252" href="hott.hlevel.core.html#245" class="Function"
+      >h</a
+      ><a name="253"
+      > </a
+      ><a name="254" class="Number"
+      >1</a
+      ><a name="255"
+      > </a
+      ><a name="256" class="Symbol"
+      >(</a
+      ><a name="257" href="chapter3.ex19.html#212" class="Bound"
+      >P</a
+      ><a name="258"
+      > </a
+      ><a name="259" href="chapter3.ex19.html#243" class="Bound"
+      >n</a
+      ><a name="260" class="Symbol"
+      >))</a
+      ><a name="262"
+      >
+         </a
+      ><a name="272" class="Symbol"
+      >(</a
+      ><a name="273" href="chapter3.ex19.html#273" class="Bound"
+      >P?</a
+      ><a name="275"
+      > </a
+      ><a name="276" class="Symbol"
+      >:</a
+      ><a name="277"
+      > </a
+      ><a name="278" class="Symbol"
+      >(</a
+      ><a name="279" href="chapter3.ex19.html#279" class="Bound"
+      >n</a
+      ><a name="280"
+      > </a
+      ><a name="281" class="Symbol"
+      >:</a
+      ><a name="282"
+      > </a
+      ><a name="283" href="sets.nat.core.html#182" class="Datatype"
+      >&#8469;</a
+      ><a name="284" class="Symbol"
+      >)</a
+      ><a name="285"
+      > </a
+      ><a name="286" class="Symbol"
+      >&#8594;</a
+      ><a name="287"
+      > </a
+      ><a name="288" href="decidable.html#191" class="Datatype"
+      >Dec</a
+      ><a name="291"
+      > </a
+      ><a name="292" class="Symbol"
+      >(</a
+      ><a name="293" href="chapter3.ex19.html#212" class="Bound"
+      >P</a
+      ><a name="294"
+      > </a
+      ><a name="295" href="chapter3.ex19.html#279" class="Bound"
+      >n</a
+      ><a name="296" class="Symbol"
+      >))</a
+      ><a name="298"
+      > </a
+      ><a name="299" class="Keyword"
+      >where</a
+      ><a name="304"
+      >
+  </a
+      ><a name="307" href="chapter3.ex19.html#307" class="Function"
+      >None</a
+      ><a name="311"
+      > </a
+      ><a name="312" class="Symbol"
+      >:</a
+      ><a name="313"
+      > </a
+      ><a name="314" href="sets.nat.core.html#182" class="Datatype"
+      >&#8469;</a
+      ><a name="315"
+      > </a
+      ><a name="316" class="Symbol"
+      >&#8594;</a
+      ><a name="317"
+      > </a
+      ><a name="318" class="PrimitiveType"
+      >Set</a
+      ><a name="321"
+      > </a
+      ><a name="322" class="Symbol"
+      >_</a
+      ><a name="323"
+      >
+  </a
+      ><a name="326" href="chapter3.ex19.html#307" class="Function"
+      >None</a
+      ><a name="330"
+      > </a
+      ><a name="331" href="chapter3.ex19.html#331" class="Bound"
+      >n</a
+      ><a name="332"
+      > </a
+      ><a name="333" class="Symbol"
+      >=</a
+      ><a name="334"
+      > </a
+      ><a name="335" class="Symbol"
+      >&#8704;</a
+      ><a name="336"
+      > </a
+      ><a name="337" href="chapter3.ex19.html#337" class="Bound"
+      >j</a
+      ><a name="338"
+      > </a
+      ><a name="339" class="Symbol"
+      >&#8594;</a
+      ><a name="340"
+      > </a
+      ><a name="341" href="chapter3.ex19.html#337" class="Bound"
+      >j</a
+      ><a name="342"
+      > </a
+      ><a name="343" href="sets.nat.ordering.html#173" class="Datatype Operator"
+      >&lt;</a
+      ><a name="344"
+      > </a
+      ><a name="345" href="chapter3.ex19.html#331" class="Bound"
+      >n</a
+      ><a name="346"
+      > </a
+      ><a name="347" class="Symbol"
+      >&#8594;</a
+      ><a name="348"
+      > </a
+      ><a name="349" href="sets.empty.html#149" class="Function Operator"
+      >&#172;</a
+      ><a name="350"
+      > </a
+      ><a name="351" href="chapter3.ex19.html#212" class="Bound"
+      >P</a
+      ><a name="352"
+      > </a
+      ><a name="353" href="chapter3.ex19.html#337" class="Bound"
+      >j</a
+      ><a name="354"
+      >
+
+  </a
+      ><a name="358" href="chapter3.ex19.html#358" class="Function"
+      >none-h1</a
+      ><a name="365"
+      > </a
+      ><a name="366" class="Symbol"
+      >:</a
+      ><a name="367"
+      > </a
+      ><a name="368" class="Symbol"
+      >&#8704;</a
+      ><a name="369"
+      > </a
+      ><a name="370" href="chapter3.ex19.html#370" class="Bound"
+      >n</a
+      ><a name="371"
+      > </a
+      ><a name="372" class="Symbol"
+      >&#8594;</a
+      ><a name="373"
+      > </a
+      ><a name="374" href="hott.hlevel.core.html#245" class="Function"
+      >h</a
+      ><a name="375"
+      > </a
+      ><a name="376" class="Number"
+      >1</a
+      ><a name="377"
+      > </a
+      ><a name="378" class="Symbol"
+      >(</a
+      ><a name="379" href="chapter3.ex19.html#307" class="Function"
+      >None</a
+      ><a name="383"
+      > </a
+      ><a name="384" href="chapter3.ex19.html#370" class="Bound"
+      >n</a
+      ><a name="385" class="Symbol"
+      >)</a
+      ><a name="386"
+      >
+  </a
+      ><a name="389" href="chapter3.ex19.html#358" class="Function"
+      >none-h1</a
+      ><a name="396"
+      > </a
+      ><a name="397" href="chapter3.ex19.html#397" class="Bound"
+      >n</a
+      ><a name="398"
+      > </a
+      ><a name="399" class="Symbol"
+      >=</a
+      ><a name="400"
+      > </a
+      ><a name="401" href="hott.hlevel.closure.extra.html#677" class="Function"
+      >&#928;-hlevel</a
+      ><a name="409"
+      > </a
+      ><a name="410" class="Symbol"
+      >&#955;</a
+      ><a name="411"
+      > </a
+      ><a name="412" href="chapter3.ex19.html#412" class="Bound"
+      >j</a
+      ><a name="413"
+      >
+            </a
+      ><a name="426" class="Symbol"
+      >&#8594;</a
+      ><a name="427"
+      > </a
+      ><a name="428" href="hott.hlevel.closure.extra.html#677" class="Function"
+      >&#928;-hlevel</a
+      ><a name="436"
+      > </a
+      ><a name="437" class="Symbol"
+      >&#955;</a
+      ><a name="438"
+      > </a
+      ><a name="439" href="chapter3.ex19.html#439" class="Bound"
+      >p</a
+      ><a name="440"
+      >
+            </a
+      ><a name="453" class="Symbol"
+      >&#8594;</a
+      ><a name="454"
+      > </a
+      ><a name="455" href="hott.hlevel.closure.extra.html#677" class="Function"
+      >&#928;-hlevel</a
+      ><a name="463"
+      > </a
+      ><a name="464" class="Symbol"
+      >&#955;</a
+      ><a name="465"
+      > </a
+      ><a name="466" href="chapter3.ex19.html#466" class="Bound"
+      >_</a
+      ><a name="467"
+      >
+            </a
+      ><a name="480" class="Symbol"
+      >&#8594;</a
+      ><a name="481"
+      > </a
+      ><a name="482" href="hott.hlevel.sets.html#479" class="Function"
+      >&#8869;-prop</a
+      ><a name="488"
+      >
+
+  </a
+      ><a name="492" href="chapter3.ex19.html#492" class="Function"
+      >none-cons</a
+      ><a name="501"
+      > </a
+      ><a name="502" class="Symbol"
+      >:</a
+      ><a name="503"
+      > </a
+      ><a name="504" class="Symbol"
+      >&#8704;</a
+      ><a name="505"
+      > </a
+      ><a name="506" class="Symbol"
+      >{</a
+      ><a name="507" href="chapter3.ex19.html#507" class="Bound"
+      >n</a
+      ><a name="508" class="Symbol"
+      >}</a
+      ><a name="509"
+      > </a
+      ><a name="510" class="Symbol"
+      >&#8594;</a
+      ><a name="511"
+      > </a
+      ><a name="512" href="chapter3.ex19.html#307" class="Function"
+      >None</a
+      ><a name="516"
+      > </a
+      ><a name="517" href="chapter3.ex19.html#507" class="Bound"
+      >n</a
+      ><a name="518"
+      > </a
+      ><a name="519" class="Symbol"
+      >&#8594;</a
+      ><a name="520"
+      > </a
+      ><a name="521" href="sets.empty.html#149" class="Function Operator"
+      >&#172;</a
+      ><a name="522"
+      > </a
+      ><a name="523" href="chapter3.ex19.html#212" class="Bound"
+      >P</a
+      ><a name="524"
+      > </a
+      ><a name="525" href="chapter3.ex19.html#507" class="Bound"
+      >n</a
+      ><a name="526"
+      > </a
+      ><a name="527" class="Symbol"
+      >&#8594;</a
+      ><a name="528"
+      > </a
+      ><a name="529" href="chapter3.ex19.html#307" class="Function"
+      >None</a
+      ><a name="533"
+      > </a
+      ><a name="534" class="Symbol"
+      >(</a
+      ><a name="535" href="sets.nat.core.html#209" class="InductiveConstructor"
+      >suc</a
+      ><a name="538"
+      > </a
+      ><a name="539" href="chapter3.ex19.html#507" class="Bound"
+      >n</a
+      ><a name="540" class="Symbol"
+      >)</a
+      ><a name="541"
+      >
+  </a
+      ><a name="544" href="chapter3.ex19.html#492" class="Function"
+      >none-cons</a
+      ><a name="553"
+      > </a
+      ><a name="554" class="Symbol"
+      >{</a
+      ><a name="555" href="chapter3.ex19.html#555" class="Bound"
+      >n</a
+      ><a name="556" class="Symbol"
+      >}</a
+      ><a name="557"
+      > </a
+      ><a name="558" href="chapter3.ex19.html#558" class="Bound"
+      >u</a
+      ><a name="559"
+      > </a
+      ><a name="560" href="chapter3.ex19.html#560" class="Bound"
+      >v</a
+      ><a name="561"
+      > </a
+      ><a name="562" class="DottedPattern Symbol"
+      >.</a
+      ><a name="563" href="chapter3.ex19.html#555" class="DottedPattern Bound"
+      >n</a
+      ><a name="564"
+      > </a
+      ><a name="565" href="sets.nat.ordering.html#199" class="InductiveConstructor"
+      >suc&lt;</a
+      ><a name="569"
+      > </a
+      ><a name="570" class="Symbol"
+      >=</a
+      ><a name="571"
+      > </a
+      ><a name="572" href="chapter3.ex19.html#560" class="Bound"
+      >v</a
+      ><a name="573"
+      >
+  </a
+      ><a name="576" href="chapter3.ex19.html#492" class="Function"
+      >none-cons</a
+      ><a name="585"
+      > </a
+      ><a name="586" href="chapter3.ex19.html#586" class="Bound"
+      >u</a
+      ><a name="587"
+      > </a
+      ><a name="588" href="chapter3.ex19.html#588" class="Bound"
+      >v</a
+      ><a name="589"
+      > </a
+      ><a name="590" href="chapter3.ex19.html#590" class="Bound"
+      >j</a
+      ><a name="591"
+      > </a
+      ><a name="592" class="Symbol"
+      >(</a
+      ><a name="593" href="sets.nat.ordering.html#226" class="InductiveConstructor"
+      >n&lt;s</a
+      ><a name="596"
+      > </a
+      ><a name="597" href="chapter3.ex19.html#597" class="Bound"
+      >p</a
+      ><a name="598" class="Symbol"
+      >)</a
+      ><a name="599"
+      > </a
+      ><a name="600" class="Symbol"
+      >=</a
+      ><a name="601"
+      > </a
+      ><a name="602" href="chapter3.ex19.html#586" class="Bound"
+      >u</a
+      ><a name="603"
+      > </a
+      ><a name="604" href="chapter3.ex19.html#590" class="Bound"
+      >j</a
+      ><a name="605"
+      > </a
+      ><a name="606" href="chapter3.ex19.html#597" class="Bound"
+      >p</a
+      ><a name="607"
+      >
+
+  </a
+      ><a name="611" class="Keyword"
+      >data</a
+      ><a name="615"
+      > </a
+      ><a name="616" href="chapter3.ex19.html#616" class="Datatype"
+      >Result</a
+      ><a name="622"
+      > </a
+      ><a name="623" class="Symbol"
+      >(</a
+      ><a name="624" href="chapter3.ex19.html#624" class="Bound"
+      >n</a
+      ><a name="625"
+      > </a
+      ><a name="626" class="Symbol"
+      >:</a
+      ><a name="627"
+      > </a
+      ><a name="628" href="sets.nat.core.html#182" class="Datatype"
+      >&#8469;</a
+      ><a name="629" class="Symbol"
+      >)</a
+      ><a name="630"
+      > </a
+      ><a name="631" class="Symbol"
+      >:</a
+      ><a name="632"
+      > </a
+      ><a name="633" class="PrimitiveType"
+      >Set</a
+      ><a name="636"
+      > </a
+      ><a name="637" href="chapter3.ex19.html#209" class="Bound"
+      >i</a
+      ><a name="638"
+      > </a
+      ><a name="639" class="Keyword"
+      >where</a
+      ><a name="644"
+      >
+    </a
+      ><a name="649" href="chapter3.ex19.html#649" class="InductiveConstructor"
+      >found</a
+      ><a name="654"
+      > </a
+      ><a name="655" class="Symbol"
+      >:</a
+      ><a name="656"
+      > </a
+      ><a name="657" class="Symbol"
+      >(</a
+      ><a name="658" href="chapter3.ex19.html#658" class="Bound"
+      >i</a
+      ><a name="659"
+      > </a
+      ><a name="660" class="Symbol"
+      >:</a
+      ><a name="661"
+      > </a
+      ><a name="662" href="sets.nat.core.html#182" class="Datatype"
+      >&#8469;</a
+      ><a name="663" class="Symbol"
+      >)</a
+      ><a name="664"
+      > </a
+      ><a name="665" class="Symbol"
+      >&#8594;</a
+      ><a name="666"
+      > </a
+      ><a name="667" href="chapter3.ex19.html#658" class="Bound"
+      >i</a
+      ><a name="668"
+      > </a
+      ><a name="669" href="sets.nat.ordering.html#173" class="Datatype Operator"
+      >&lt;</a
+      ><a name="670"
+      > </a
+      ><a name="671" href="chapter3.ex19.html#624" class="Bound"
+      >n</a
+      ><a name="672"
+      >
+          </a
+      ><a name="683" class="Symbol"
+      >&#8594;</a
+      ><a name="684"
+      > </a
+      ><a name="685" href="chapter3.ex19.html#212" class="Bound"
+      >P</a
+      ><a name="686"
+      > </a
+      ><a name="687" href="chapter3.ex19.html#658" class="Bound"
+      >i</a
+      ><a name="688"
+      > </a
+      ><a name="689" class="Symbol"
+      >&#8594;</a
+      ><a name="690"
+      > </a
+      ><a name="691" href="chapter3.ex19.html#307" class="Function"
+      >None</a
+      ><a name="695"
+      > </a
+      ><a name="696" href="chapter3.ex19.html#658" class="Bound"
+      >i</a
+      ><a name="697"
+      >
+          </a
+      ><a name="708" class="Symbol"
+      >&#8594;</a
+      ><a name="709"
+      > </a
+      ><a name="710" href="chapter3.ex19.html#616" class="Datatype"
+      >Result</a
+      ><a name="716"
+      > </a
+      ><a name="717" href="chapter3.ex19.html#624" class="Bound"
+      >n</a
+      ><a name="718"
+      >
+    </a
+      ><a name="723" href="chapter3.ex19.html#723" class="InductiveConstructor"
+      >not-found</a
+      ><a name="732"
+      > </a
+      ><a name="733" class="Symbol"
+      >:</a
+      ><a name="734"
+      > </a
+      ><a name="735" href="chapter3.ex19.html#307" class="Function"
+      >None</a
+      ><a name="739"
+      > </a
+      ><a name="740" href="chapter3.ex19.html#624" class="Bound"
+      >n</a
+      ><a name="741"
+      > </a
+      ><a name="742" class="Symbol"
+      >&#8594;</a
+      ><a name="743"
+      > </a
+      ><a name="744" href="chapter3.ex19.html#616" class="Datatype"
+      >Result</a
+      ><a name="750"
+      > </a
+      ><a name="751" href="chapter3.ex19.html#624" class="Bound"
+      >n</a
+      ><a name="752"
+      >
+
+  </a
+      ><a name="756" href="chapter3.ex19.html#756" class="Function"
+      >IsMin</a
+      ><a name="761"
+      > </a
+      ><a name="762" class="Symbol"
+      >:</a
+      ><a name="763"
+      > </a
+      ><a name="764" href="sets.nat.core.html#182" class="Datatype"
+      >&#8469;</a
+      ><a name="765"
+      > </a
+      ><a name="766" class="Symbol"
+      >&#8594;</a
+      ><a name="767"
+      > </a
+      ><a name="768" class="PrimitiveType"
+      >Set</a
+      ><a name="771"
+      > </a
+      ><a name="772" class="Symbol"
+      >_</a
+      ><a name="773"
+      >
+  </a
+      ><a name="776" href="chapter3.ex19.html#756" class="Function"
+      >IsMin</a
+      ><a name="781"
+      > </a
+      ><a name="782" href="chapter3.ex19.html#782" class="Bound"
+      >n</a
+      ><a name="783"
+      > </a
+      ><a name="784" class="Symbol"
+      >=</a
+      ><a name="785"
+      > </a
+      ><a name="786" href="chapter3.ex19.html#212" class="Bound"
+      >P</a
+      ><a name="787"
+      > </a
+      ><a name="788" href="chapter3.ex19.html#782" class="Bound"
+      >n</a
+      ><a name="789"
+      > </a
+      ><a name="790" href="sum.html#265" class="Function Operator"
+      >&#215;</a
+      ><a name="791"
+      > </a
+      ><a name="792" href="chapter3.ex19.html#307" class="Function"
+      >None</a
+      ><a name="796"
+      > </a
+      ><a name="797" href="chapter3.ex19.html#782" class="Bound"
+      >n</a
+      ><a name="798"
+      >
+
+  </a
+      ><a name="802" href="chapter3.ex19.html#802" class="Function"
+      >is-min-h1</a
+      ><a name="811"
+      > </a
+      ><a name="812" class="Symbol"
+      >:</a
+      ><a name="813"
+      > </a
+      ><a name="814" class="Symbol"
+      >(</a
+      ><a name="815" href="chapter3.ex19.html#815" class="Bound"
+      >n</a
+      ><a name="816"
+      > </a
+      ><a name="817" class="Symbol"
+      >:</a
+      ><a name="818"
+      > </a
+      ><a name="819" href="sets.nat.core.html#182" class="Datatype"
+      >&#8469;</a
+      ><a name="820" class="Symbol"
+      >)</a
+      ><a name="821"
+      > </a
+      ><a name="822" class="Symbol"
+      >&#8594;</a
+      ><a name="823"
+      > </a
+      ><a name="824" href="hott.hlevel.core.html#245" class="Function"
+      >h</a
+      ><a name="825"
+      > </a
+      ><a name="826" class="Number"
+      >1</a
+      ><a name="827"
+      > </a
+      ><a name="828" class="Symbol"
+      >(</a
+      ><a name="829" href="chapter3.ex19.html#756" class="Function"
+      >IsMin</a
+      ><a name="834"
+      > </a
+      ><a name="835" href="chapter3.ex19.html#815" class="Bound"
+      >n</a
+      ><a name="836" class="Symbol"
+      >)</a
+      ><a name="837"
+      >
+  </a
+      ><a name="840" href="chapter3.ex19.html#802" class="Function"
+      >is-min-h1</a
+      ><a name="849"
+      > </a
+      ><a name="850" href="chapter3.ex19.html#850" class="Bound"
+      >n</a
+      ><a name="851"
+      > </a
+      ><a name="852" class="Symbol"
+      >=</a
+      ><a name="853"
+      > </a
+      ><a name="854" href="hott.hlevel.closure.extra.html#1480" class="Function"
+      >&#215;-hlevel</a
+      ><a name="862"
+      > </a
+      ><a name="863" class="Symbol"
+      >(</a
+      ><a name="864" href="chapter3.ex19.html#237" class="Bound"
+      >hP</a
+      ><a name="866"
+      > </a
+      ><a name="867" href="chapter3.ex19.html#850" class="Bound"
+      >n</a
+      ><a name="868" class="Symbol"
+      >)</a
+      ><a name="869"
+      > </a
+      ><a name="870" class="Symbol"
+      >(</a
+      ><a name="871" href="chapter3.ex19.html#358" class="Function"
+      >none-h1</a
+      ><a name="878"
+      > </a
+      ><a name="879" href="chapter3.ex19.html#850" class="Bound"
+      >n</a
+      ><a name="880" class="Symbol"
+      >)</a
+      ><a name="881"
+      >
+
+  </a
+      ><a name="885" href="chapter3.ex19.html#885" class="Function"
+      >Min</a
+      ><a name="888"
+      > </a
+      ><a name="889" class="Symbol"
+      >:</a
+      ><a name="890"
+      > </a
+      ><a name="891" class="PrimitiveType"
+      >Set</a
+      ><a name="894"
+      > </a
+      ><a name="895" href="chapter3.ex19.html#209" class="Bound"
+      >i</a
+      ><a name="896"
+      >
+  </a
+      ><a name="899" href="chapter3.ex19.html#885" class="Function"
+      >Min</a
+      ><a name="902"
+      > </a
+      ><a name="903" class="Symbol"
+      >=</a
+      ><a name="904"
+      > </a
+      ><a name="905" href="sum.html#133" class="Record"
+      >&#931;</a
+      ><a name="906"
+      > </a
+      ><a name="907" href="sets.nat.core.html#182" class="Datatype"
+      >&#8469;</a
+      ><a name="908"
+      > </a
+      ><a name="909" href="chapter3.ex19.html#756" class="Function"
+      >IsMin</a
+      ><a name="914"
+      >
+
+  </a
+      ><a name="918" href="chapter3.ex19.html#918" class="Function"
+      >min-eq</a
+      ><a name="924"
+      > </a
+      ><a name="925" class="Symbol"
+      >:</a
+      ><a name="926"
+      > </a
+      ><a name="927" class="Symbol"
+      >{</a
+      ><a name="928" href="chapter3.ex19.html#928" class="Bound"
+      >n</a
+      ><a name="929"
+      > </a
+      ><a name="930" href="chapter3.ex19.html#930" class="Bound"
+      >m</a
+      ><a name="931"
+      > </a
+      ><a name="932" class="Symbol"
+      >:</a
+      ><a name="933"
+      > </a
+      ><a name="934" href="chapter3.ex19.html#885" class="Function"
+      >Min</a
+      ><a name="937" class="Symbol"
+      >}</a
+      ><a name="938"
+      >
+         </a
+      ><a name="948" class="Symbol"
+      >&#8594;</a
+      ><a name="949"
+      > </a
+      ><a name="950" href="sum.html#219" class="Function"
+      >proj&#8321;</a
+      ><a name="955"
+      > </a
+      ><a name="956" href="chapter3.ex19.html#928" class="Bound"
+      >n</a
+      ><a name="957"
+      > </a
+      ><a name="958" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="959"
+      > </a
+      ><a name="960" href="sum.html#219" class="Function"
+      >proj&#8321;</a
+      ><a name="965"
+      > </a
+      ><a name="966" href="chapter3.ex19.html#930" class="Bound"
+      >m</a
+      ><a name="967"
+      >
+         </a
+      ><a name="977" class="Symbol"
+      >&#8594;</a
+      ><a name="978"
+      > </a
+      ><a name="979" href="chapter3.ex19.html#928" class="Bound"
+      >n</a
+      ><a name="980"
+      > </a
+      ><a name="981" href="equality.core.html#145" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="982"
+      > </a
+      ><a name="983" href="chapter3.ex19.html#930" class="Bound"
+      >m</a
+      ><a name="984"
+      >
+  </a
+      ><a name="987" href="chapter3.ex19.html#918" class="Function"
+      >min-eq</a
+      ><a name="993"
+      > </a
+      ><a name="994" class="Symbol"
+      >{</a
+      ><a name="995" href="chapter3.ex19.html#995" class="Bound"
+      >n</a
+      ><a name="996"
+      > </a
+      ><a name="997" href="sum.html#203" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="998"
+      > </a
+      ><a name="999" href="chapter3.ex19.html#999" class="Bound"
+      >d</a
+      ><a name="1000" class="Symbol"
+      >}{</a
+      ><a name="1002" href="chapter3.ex19.html#1002" class="Bound"
+      >m</a
+      ><a name="1003"
+      > </a
+      ><a name="1004" href="sum.html#203" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="1005"
+      > </a
+      ><a name="1006" href="chapter3.ex19.html#1006" class="Bound"
+      >d'</a
+      ><a name="1008" class="Symbol"
+      >}</a
+      ><a name="1009"
+      > </a
+      ><a name="1010" href="chapter3.ex19.html#1010" class="Bound"
+      >p</a
+      ><a name="1011"
+      > </a
+      ><a name="1012" class="Symbol"
+      >=</a
+      ><a name="1013"
+      > </a
+      ><a name="1014" href="equality.calculus.html#1747" class="Function"
+      >unap&#931;</a
+      ><a name="1019"
+      > </a
+      ><a name="1020" class="Symbol"
+      >(</a
+      ><a name="1021" href="chapter3.ex19.html#1010" class="Bound"
+      >p</a
+      ><a name="1022"
+      > </a
+      ><a name="1023" href="sum.html#203" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="1024"
+      > </a
+      ><a name="1025" href="hott.hlevel.core.html#805" class="Function"
+      >h1&#8658;prop</a
+      ><a name="1032"
+      > </a
+      ><a name="1033" class="Symbol"
+      >(</a
+      ><a name="1034" href="chapter3.ex19.html#802" class="Function"
+      >is-min-h1</a
+      ><a name="1043"
+      > </a
+      ><a name="1044" href="chapter3.ex19.html#1002" class="Bound"
+      >m</a
+      ><a name="1045" class="Symbol"
+      >)</a
+      ><a name="1046"
+      > </a
+      ><a name="1047" class="Symbol"
+      >_</a
+      ><a name="1048"
+      > </a
+      ><a name="1049" class="Symbol"
+      >_)</a
+      ><a name="1051"
+      >
+
+  </a
+      ><a name="1055" href="chapter3.ex19.html#1055" class="Function"
+      >min-prop</a
+      ><a name="1063"
+      > </a
+      ><a name="1064" class="Symbol"
+      >:</a
+      ><a name="1065"
+      > </a
+      ><a name="1066" href="hott.hlevel.core.html#546" class="Function"
+      >prop</a
+      ><a name="1070"
+      > </a
+      ><a name="1071" href="chapter3.ex19.html#885" class="Function"
+      >Min</a
+      ><a name="1074"
+      >
+  </a
+      ><a name="1077" href="chapter3.ex19.html#1055" class="Function"
+      >min-prop</a
+      ><a name="1085"
+      > </a
+      ><a name="1086" class="Symbol"
+      >(</a
+      ><a name="1087" href="chapter3.ex19.html#1087" class="Bound"
+      >n</a
+      ><a name="1088"
+      > </a
+      ><a name="1089" href="sum.html#203" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="1090"
+      > </a
+      ><a name="1091" href="chapter3.ex19.html#1091" class="Bound"
+      >d</a
+      ><a name="1092"
+      > </a
+      ><a name="1093" href="sum.html#203" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="1094"
+      > </a
+      ><a name="1095" href="chapter3.ex19.html#1095" class="Bound"
+      >u</a
+      ><a name="1096" class="Symbol"
+      >)</a
+      ><a name="1097"
+      > </a
+      ><a name="1098" class="Symbol"
+      >(</a
+      ><a name="1099" href="chapter3.ex19.html#1099" class="Bound"
+      >m</a
+      ><a name="1100"
+      > </a
+      ><a name="1101" href="sum.html#203" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="1102"
+      > </a
+      ><a name="1103" href="chapter3.ex19.html#1103" class="Bound"
+      >d'</a
+      ><a name="1105"
+      > </a
+      ><a name="1106" href="sum.html#203" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="1107"
+      > </a
+      ><a name="1108" href="chapter3.ex19.html#1108" class="Bound"
+      >u'</a
+      ><a name="1110" class="Symbol"
+      >)</a
+      ><a name="1111"
+      > </a
+      ><a name="1112" class="Keyword"
+      >with</a
+      ><a name="1116"
+      > </a
+      ><a name="1117" href="sets.nat.ordering.html#659" class="Function"
+      >compare</a
+      ><a name="1124"
+      > </a
+      ><a name="1125" href="chapter3.ex19.html#1087" class="Bound"
+      >n</a
+      ><a name="1126"
+      > </a
+      ><a name="1127" href="chapter3.ex19.html#1099" class="Bound"
+      >m</a
+      ><a name="1128"
+      >
+  </a
+      ><a name="1131" class="Symbol"
+      >...</a
+      ><a name="1134"
+      > </a
+      ><a name="1135" class="Symbol"
+      >|</a
+      ><a name="1136"
+      > </a
+      ><a name="1137" href="sets.nat.ordering.html#576" class="InductiveConstructor"
+      >lt</a
+      ><a name="1139"
+      > </a
+      ><a name="1140" href="chapter3.ex19.html#1140" class="Bound"
+      >q</a
+      ><a name="1141"
+      > </a
+      ><a name="1142" class="Symbol"
+      >=</a
+      ><a name="1143"
+      > </a
+      ><a name="1144" href="sets.empty.html#104" class="Function"
+      >&#8869;-elim</a
+      ><a name="1150"
+      > </a
+      ><a name="1151" class="Symbol"
+      >(</a
+      ><a name="1152" href="chapter3.ex19.html#1108" class="Bound"
+      >u'</a
+      ><a name="1154"
+      > </a
+      ><a name="1155" href="chapter3.ex19.html#1087" class="Bound"
+      >n</a
+      ><a name="1156"
+      > </a
+      ><a name="1157" href="chapter3.ex19.html#1140" class="Bound"
+      >q</a
+      ><a name="1158"
+      > </a
+      ><a name="1159" href="chapter3.ex19.html#1091" class="Bound"
+      >d</a
+      ><a name="1160" class="Symbol"
+      >)</a
+      ><a name="1161"
+      >
+  </a
+      ><a name="1164" class="Symbol"
+      >...</a
+      ><a name="1167"
+      > </a
+      ><a name="1168" class="Symbol"
+      >|</a
+      ><a name="1169"
+      > </a
+      ><a name="1170" href="sets.nat.ordering.html#604" class="InductiveConstructor"
+      >eq</a
+      ><a name="1172"
+      > </a
+      ><a name="1173" href="chapter3.ex19.html#1173" class="Bound"
+      >q</a
+      ><a name="1174"
+      > </a
+      ><a name="1175" class="Symbol"
+      >=</a
+      ><a name="1176"
+      > </a
+      ><a name="1177" href="chapter3.ex19.html#918" class="Function"
+      >min-eq</a
+      ><a name="1183"
+      > </a
+      ><a name="1184" href="chapter3.ex19.html#1173" class="Bound"
+      >q</a
+      ><a name="1185"
+      >
+  </a
+      ><a name="1188" class="Symbol"
+      >...</a
+      ><a name="1191"
+      > </a
+      ><a name="1192" class="Symbol"
+      >|</a
+      ><a name="1193"
+      > </a
+      ><a name="1194" href="sets.nat.ordering.html#632" class="InductiveConstructor"
+      >gt</a
+      ><a name="1196"
+      > </a
+      ><a name="1197" href="chapter3.ex19.html#1197" class="Bound"
+      >q</a
+      ><a name="1198"
+      > </a
+      ><a name="1199" class="Symbol"
+      >=</a
+      ><a name="1200"
+      > </a
+      ><a name="1201" href="sets.empty.html#104" class="Function"
+      >&#8869;-elim</a
+      ><a name="1207"
+      > </a
+      ><a name="1208" class="Symbol"
+      >(</a
+      ><a name="1209" href="chapter3.ex19.html#1095" class="Bound"
+      >u</a
+      ><a name="1210"
+      > </a
+      ><a name="1211" href="chapter3.ex19.html#1099" class="Bound"
+      >m</a
+      ><a name="1212"
+      > </a
+      ><a name="1213" href="chapter3.ex19.html#1197" class="Bound"
+      >q</a
+      ><a name="1214"
+      > </a
+      ><a name="1215" href="chapter3.ex19.html#1103" class="Bound"
+      >d'</a
+      ><a name="1217" class="Symbol"
+      >)</a
+      ><a name="1218"
+      >
+
+  </a
+      ><a name="1222" href="chapter3.ex19.html#1222" class="Function"
+      >find</a
+      ><a name="1226"
+      > </a
+      ><a name="1227" class="Symbol"
+      >:</a
+      ><a name="1228"
+      > </a
+      ><a name="1229" class="Symbol"
+      >(</a
+      ><a name="1230" href="chapter3.ex19.html#1230" class="Bound"
+      >n</a
+      ><a name="1231"
+      > </a
+      ><a name="1232" class="Symbol"
+      >:</a
+      ><a name="1233"
+      > </a
+      ><a name="1234" href="sets.nat.core.html#182" class="Datatype"
+      >&#8469;</a
+      ><a name="1235" class="Symbol"
+      >)</a
+      ><a name="1236"
+      > </a
+      ><a name="1237" class="Symbol"
+      >&#8594;</a
+      ><a name="1238"
+      > </a
+      ><a name="1239" href="chapter3.ex19.html#616" class="Datatype"
+      >Result</a
+      ><a name="1245"
+      > </a
+      ><a name="1246" href="chapter3.ex19.html#1230" class="Bound"
+      >n</a
+      ><a name="1247"
+      >
+  </a
+      ><a name="1250" href="chapter3.ex19.html#1222" class="Function"
+      >find</a
+      ><a name="1254"
+      > </a
+      ><a name="1255" href="sets.nat.core.html#198" class="InductiveConstructor"
+      >0</a
+      ><a name="1256"
+      > </a
+      ><a name="1257" class="Symbol"
+      >=</a
+      ><a name="1258"
+      > </a
+      ><a name="1259" href="chapter3.ex19.html#723" class="InductiveConstructor"
+      >not-found</a
+      ><a name="1268"
+      > </a
+      ><a name="1269" class="Symbol"
+      >(&#955;</a
+      ><a name="1271"
+      > </a
+      ><a name="1272" href="chapter3.ex19.html#1272" class="Bound"
+      >j</a
+      ><a name="1273"
+      > </a
+      ><a name="1274" class="Symbol"
+      >())</a
+      ><a name="1277"
+      >
+  </a
+      ><a name="1280" href="chapter3.ex19.html#1222" class="Function"
+      >find</a
+      ><a name="1284"
+      > </a
+      ><a name="1285" class="Symbol"
+      >(</a
+      ><a name="1286" href="sets.nat.core.html#209" class="InductiveConstructor"
+      >suc</a
+      ><a name="1289"
+      > </a
+      ><a name="1290" href="chapter3.ex19.html#1290" class="Bound"
+      >n</a
+      ><a name="1291" class="Symbol"
+      >)</a
+      ><a name="1292"
+      > </a
+      ><a name="1293" class="Keyword"
+      >with</a
+      ><a name="1297"
+      > </a
+      ><a name="1298" href="chapter3.ex19.html#1222" class="Function"
+      >find</a
+      ><a name="1302"
+      > </a
+      ><a name="1303" href="chapter3.ex19.html#1290" class="Bound"
+      >n</a
+      ><a name="1304"
+      >
+  </a
+      ><a name="1307" class="Symbol"
+      >...</a
+      ><a name="1310"
+      > </a
+      ><a name="1311" class="Symbol"
+      >|</a
+      ><a name="1312"
+      > </a
+      ><a name="1313" href="chapter3.ex19.html#649" class="InductiveConstructor"
+      >found</a
+      ><a name="1318"
+      > </a
+      ><a name="1319" href="chapter3.ex19.html#1319" class="Bound"
+      >i</a
+      ><a name="1320"
+      > </a
+      ><a name="1321" href="chapter3.ex19.html#1321" class="Bound"
+      >q</a
+      ><a name="1322"
+      > </a
+      ><a name="1323" href="chapter3.ex19.html#1323" class="Bound"
+      >p</a
+      ><a name="1324"
+      > </a
+      ><a name="1325" href="chapter3.ex19.html#1325" class="Bound"
+      >u</a
+      ><a name="1326"
+      > </a
+      ><a name="1327" class="Symbol"
+      >=</a
+      ><a name="1328"
+      > </a
+      ><a name="1329" href="chapter3.ex19.html#649" class="InductiveConstructor"
+      >found</a
+      ><a name="1334"
+      > </a
+      ><a name="1335" href="chapter3.ex19.html#1319" class="Bound"
+      >i</a
+      ><a name="1336"
+      > </a
+      ><a name="1337" class="Symbol"
+      >(</a
+      ><a name="1338" href="sets.nat.ordering.html#226" class="InductiveConstructor"
+      >n&lt;s</a
+      ><a name="1341"
+      > </a
+      ><a name="1342" href="chapter3.ex19.html#1321" class="Bound"
+      >q</a
+      ><a name="1343" class="Symbol"
+      >)</a
+      ><a name="1344"
+      > </a
+      ><a name="1345" href="chapter3.ex19.html#1323" class="Bound"
+      >p</a
+      ><a name="1346"
+      > </a
+      ><a name="1347" href="chapter3.ex19.html#1325" class="Bound"
+      >u</a
+      ><a name="1348"
+      >
+  </a
+      ><a name="1351" class="Symbol"
+      >...</a
+      ><a name="1354"
+      > </a
+      ><a name="1355" class="Symbol"
+      >|</a
+      ><a name="1356"
+      > </a
+      ><a name="1357" href="chapter3.ex19.html#723" class="InductiveConstructor"
+      >not-found</a
+      ><a name="1366"
+      > </a
+      ><a name="1367" href="chapter3.ex19.html#1367" class="Bound"
+      >u</a
+      ><a name="1368"
+      > </a
+      ><a name="1369" class="Keyword"
+      >with</a
+      ><a name="1373"
+      > </a
+      ><a name="1374" href="chapter3.ex19.html#273" class="Bound"
+      >P?</a
+      ><a name="1376"
+      > </a
+      ><a name="1377" href="chapter3.ex19.html#1290" class="Bound"
+      >n</a
+      ><a name="1378"
+      >
+  </a
+      ><a name="1381" class="Symbol"
+      >...</a
+      ><a name="1384"
+      > </a
+      ><a name="1385" class="Symbol"
+      >|</a
+      ><a name="1386"
+      > </a
+      ><a name="1387" href="decidable.html#227" class="InductiveConstructor"
+      >yes</a
+      ><a name="1390"
+      > </a
+      ><a name="1391" href="chapter3.ex19.html#1391" class="Bound"
+      >r</a
+      ><a name="1392"
+      > </a
+      ><a name="1393" class="Symbol"
+      >=</a
+      ><a name="1394"
+      > </a
+      ><a name="1395" href="chapter3.ex19.html#649" class="InductiveConstructor"
+      >found</a
+      ><a name="1400"
+      > </a
+      ><a name="1401" href="chapter3.ex19.html#1290" class="Bound"
+      >n</a
+      ><a name="1402"
+      > </a
+      ><a name="1403" href="sets.nat.ordering.html#199" class="InductiveConstructor"
+      >suc&lt;</a
+      ><a name="1407"
+      > </a
+      ><a name="1408" href="chapter3.ex19.html#1391" class="Bound"
+      >r</a
+      ><a name="1409"
+      > </a
+      ><a name="1410" href="chapter3.ex19.html#1367" class="Bound"
+      >u</a
+      ><a name="1411"
+      >
+  </a
+      ><a name="1414" class="Symbol"
+      >...</a
+      ><a name="1417"
+      > </a
+      ><a name="1418" class="Symbol"
+      >|</a
+      ><a name="1419"
+      > </a
+      ><a name="1420" href="decidable.html#254" class="InductiveConstructor"
+      >no</a
+      ><a name="1422"
+      > </a
+      ><a name="1423" href="chapter3.ex19.html#1423" class="Bound"
+      >v</a
+      ><a name="1424"
+      > </a
+      ><a name="1425" class="Symbol"
+      >=</a
+      ><a name="1426"
+      > </a
+      ><a name="1427" href="chapter3.ex19.html#723" class="InductiveConstructor"
+      >not-found</a
+      ><a name="1436"
+      > </a
+      ><a name="1437" class="Symbol"
+      >(</a
+      ><a name="1438" href="chapter3.ex19.html#492" class="Function"
+      >none-cons</a
+      ><a name="1447"
+      > </a
+      ><a name="1448" href="chapter3.ex19.html#1367" class="Bound"
+      >u</a
+      ><a name="1449"
+      > </a
+      ><a name="1450" href="chapter3.ex19.html#1423" class="Bound"
+      >v</a
+      ><a name="1451" class="Symbol"
+      >)</a
+      ><a name="1452"
+      >
+
+  </a
+      ><a name="1456" href="chapter3.ex19.html#1456" class="Function"
+      >min'</a
+      ><a name="1460"
+      > </a
+      ><a name="1461" class="Symbol"
+      >:</a
+      ><a name="1462"
+      > </a
+      ><a name="1463" href="sum.html#133" class="Record"
+      >&#931;</a
+      ><a name="1464"
+      > </a
+      ><a name="1465" href="sets.nat.core.html#182" class="Datatype"
+      >&#8469;</a
+      ><a name="1466"
+      > </a
+      ><a name="1467" href="chapter3.ex19.html#212" class="Bound"
+      >P</a
+      ><a name="1468"
+      > </a
+      ><a name="1469" class="Symbol"
+      >&#8594;</a
+      ><a name="1470"
+      > </a
+      ><a name="1471" href="chapter3.ex19.html#885" class="Function"
+      >Min</a
+      ><a name="1474"
+      >
+  </a
+      ><a name="1477" href="chapter3.ex19.html#1456" class="Function"
+      >min'</a
+      ><a name="1481"
+      > </a
+      ><a name="1482" class="Symbol"
+      >(</a
+      ><a name="1483" href="chapter3.ex19.html#1483" class="Bound"
+      >n</a
+      ><a name="1484"
+      > </a
+      ><a name="1485" href="sum.html#203" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="1486"
+      > </a
+      ><a name="1487" href="chapter3.ex19.html#1487" class="Bound"
+      >p</a
+      ><a name="1488" class="Symbol"
+      >)</a
+      ><a name="1489"
+      > </a
+      ><a name="1490" class="Keyword"
+      >with</a
+      ><a name="1494"
+      > </a
+      ><a name="1495" href="chapter3.ex19.html#1222" class="Function"
+      >find</a
+      ><a name="1499"
+      > </a
+      ><a name="1500" href="chapter3.ex19.html#1483" class="Bound"
+      >n</a
+      ><a name="1501"
+      >
+  </a
+      ><a name="1504" class="Symbol"
+      >...</a
+      ><a name="1507"
+      > </a
+      ><a name="1508" class="Symbol"
+      >|</a
+      ><a name="1509"
+      > </a
+      ><a name="1510" href="chapter3.ex19.html#649" class="InductiveConstructor"
+      >found</a
+      ><a name="1515"
+      > </a
+      ><a name="1516" href="chapter3.ex19.html#1516" class="Bound"
+      >i</a
+      ><a name="1517"
+      > </a
+      ><a name="1518" href="chapter3.ex19.html#1518" class="Bound"
+      >q</a
+      ><a name="1519"
+      > </a
+      ><a name="1520" href="chapter3.ex19.html#1520" class="Bound"
+      >p'</a
+      ><a name="1522"
+      > </a
+      ><a name="1523" href="chapter3.ex19.html#1523" class="Bound"
+      >u</a
+      ><a name="1524"
+      > </a
+      ><a name="1525" class="Symbol"
+      >=</a
+      ><a name="1526"
+      > </a
+      ><a name="1527" href="chapter3.ex19.html#1516" class="Bound"
+      >i</a
+      ><a name="1528"
+      > </a
+      ><a name="1529" href="sum.html#203" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="1530"
+      > </a
+      ><a name="1531" href="chapter3.ex19.html#1520" class="Bound"
+      >p'</a
+      ><a name="1533"
+      > </a
+      ><a name="1534" href="sum.html#203" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="1535"
+      > </a
+      ><a name="1536" href="chapter3.ex19.html#1523" class="Bound"
+      >u</a
+      ><a name="1537"
+      >
+  </a
+      ><a name="1540" class="Symbol"
+      >...</a
+      ><a name="1543"
+      > </a
+      ><a name="1544" class="Symbol"
+      >|</a
+      ><a name="1545"
+      > </a
+      ><a name="1546" href="chapter3.ex19.html#723" class="InductiveConstructor"
+      >not-found</a
+      ><a name="1555"
+      > </a
+      ><a name="1556" href="chapter3.ex19.html#1556" class="Bound"
+      >u</a
+      ><a name="1557"
+      > </a
+      ><a name="1558" class="Symbol"
+      >=</a
+      ><a name="1559"
+      > </a
+      ><a name="1560" href="chapter3.ex19.html#1483" class="Bound"
+      >n</a
+      ><a name="1561"
+      > </a
+      ><a name="1562" href="sum.html#203" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="1563"
+      > </a
+      ><a name="1564" href="chapter3.ex19.html#1487" class="Bound"
+      >p</a
+      ><a name="1565"
+      > </a
+      ><a name="1566" href="sum.html#203" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="1567"
+      > </a
+      ><a name="1568" href="chapter3.ex19.html#1556" class="Bound"
+      >u</a
+      ><a name="1569"
+      >
+
+  </a
+      ><a name="1573" href="chapter3.ex19.html#1573" class="Function"
+      >min</a
+      ><a name="1576"
+      > </a
+      ><a name="1577" class="Symbol"
+      >:</a
+      ><a name="1578"
+      > </a
+      ><a name="1579" href="hott.truncation.core.html#120" class="Datatype Operator"
+      >&#8741;</a
+      ><a name="1580"
+      > </a
+      ><a name="1581" href="sum.html#133" class="Record"
+      >&#931;</a
+      ><a name="1582"
+      > </a
+      ><a name="1583" href="sets.nat.core.html#182" class="Datatype"
+      >&#8469;</a
+      ><a name="1584"
+      > </a
+      ><a name="1585" href="chapter3.ex19.html#212" class="Bound"
+      >P</a
+      ><a name="1586"
+      > </a
+      ><a name="1587" href="hott.truncation.core.html#120" class="Datatype Operator"
+      >&#8741;</a
+      ><a name="1588"
+      > </a
+      ><a name="1589" class="Symbol"
+      >&#8594;</a
+      ><a name="1590"
+      > </a
+      ><a name="1591" href="chapter3.ex19.html#885" class="Function"
+      >Min</a
+      ><a name="1594"
+      >
+  </a
+      ><a name="1597" href="chapter3.ex19.html#1573" class="Function"
+      >min</a
+      ><a name="1600"
+      > </a
+      ><a name="1601" class="Symbol"
+      >=</a
+      ><a name="1602"
+      > </a
+      ><a name="1603" href="hott.truncation.core.html#410" class="Function"
+      >elim'</a
+      ><a name="1608"
+      > </a
+      ><a name="1609" class="Symbol"
+      >(</a
+      ><a name="1610" href="hott.hlevel.core.html#886" class="Function"
+      >prop&#8658;h1</a
+      ><a name="1617"
+      > </a
+      ><a name="1618" href="chapter3.ex19.html#1055" class="Function"
+      >min-prop</a
+      ><a name="1626" class="Symbol"
+      >)</a
+      ><a name="1627"
+      > </a
+      ><a name="1628" href="chapter3.ex19.html#1456" class="Function"
+      >min'</a
+      ><a name="1632"
+      >
+
+  </a
+      ><a name="1636" href="chapter3.ex19.html#1636" class="Function"
+      >markov</a
+      ><a name="1642"
+      > </a
+      ><a name="1643" class="Symbol"
+      >:</a
+      ><a name="1644"
+      > </a
+      ><a name="1645" href="hott.truncation.core.html#120" class="Datatype Operator"
+      >&#8741;</a
+      ><a name="1646"
+      > </a
+      ><a name="1647" href="sum.html#133" class="Record"
+      >&#931;</a
+      ><a name="1648"
+      > </a
+      ><a name="1649" href="sets.nat.core.html#182" class="Datatype"
+      >&#8469;</a
+      ><a name="1650"
+      > </a
+      ><a name="1651" href="chapter3.ex19.html#212" class="Bound"
+      >P</a
+      ><a name="1652"
+      > </a
+      ><a name="1653" href="hott.truncation.core.html#120" class="Datatype Operator"
+      >&#8741;</a
+      ><a name="1654"
+      > </a
+      ><a name="1655" class="Symbol"
+      >&#8594;</a
+      ><a name="1656"
+      > </a
+      ><a name="1657" href="sum.html#133" class="Record"
+      >&#931;</a
+      ><a name="1658"
+      > </a
+      ><a name="1659" href="sets.nat.core.html#182" class="Datatype"
+      >&#8469;</a
+      ><a name="1660"
+      > </a
+      ><a name="1661" href="chapter3.ex19.html#212" class="Bound"
+      >P</a
+      ><a name="1662"
+      >
+  </a
+      ><a name="1665" href="chapter3.ex19.html#1636" class="Function"
+      >markov</a
+      ><a name="1671"
+      > </a
+      ><a name="1672" href="chapter3.ex19.html#1672" class="Bound"
+      >z</a
+      ><a name="1673"
+      > </a
+      ><a name="1674" class="Symbol"
+      >=</a
+      ><a name="1675"
+      > </a
+      ><a name="1676" class="Keyword"
+      >let</a
+      ><a name="1679"
+      > </a
+      ><a name="1680" class="Symbol"
+      >(</a
+      ><a name="1681" href="chapter3.ex19.html#1681" class="Bound"
+      >n</a
+      ><a name="1682"
+      > </a
+      ><a name="1683" href="sum.html#203" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="1684"
+      > </a
+      ><a name="1685" href="chapter3.ex19.html#1685" class="Bound"
+      >d</a
+      ><a name="1686"
+      > </a
+      ><a name="1687" href="sum.html#203" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="1688"
+      > </a
+      ><a name="1689" href="chapter3.ex19.html#1689" class="Bound"
+      >u</a
+      ><a name="1690" class="Symbol"
+      >)</a
+      ><a name="1691"
+      > </a
+      ><a name="1692" class="Symbol"
+      >=</a
+      ><a name="1693"
+      > </a
+      ><a name="1694" href="chapter3.ex19.html#1573" class="Function"
+      >min</a
+      ><a name="1697"
+      > </a
+      ><a name="1698" href="chapter3.ex19.html#1672" class="Bound"
+      >z</a
+      ><a name="1699"
+      > </a
+      ><a name="1700" class="Keyword"
+      >in</a
+      ><a name="1702"
+      > </a
+      ><a name="1703" href="chapter3.ex19.html#1681" class="Bound"
+      >n</a
+      ><a name="1704"
+      > </a
+      ><a name="1705" href="sum.html#203" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="1706"
+      > </a
+      ><a name="1707" href="chapter3.ex19.html#1685" class="Bound"
+      >d</a
+      ><a name="1708"
+      >
+</a
+      ></pre
+    ></body
+  ></html
+>
